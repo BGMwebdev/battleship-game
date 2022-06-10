@@ -1,9 +1,3 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
-
-Welcome Bastiaan,
-
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **August 17, 2021**
-
 ## Reminders
 
 * Your code must be placed in the `run.py` file
@@ -23,9 +17,62 @@ If you have credentials, such as in the Love Sandwiches project, you must create
 
 Connect your GitHub repository and deploy as normal.
 
-## Constraints
+-------------------------------------------------------------
 
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
 
------
-Happy coding!
+## Introduction
+<hr>
+Welcome to the Speed Typing Game. A game with educational purpose, for anyone who aims to become a faster typer, but also just for the fun of it. Type as many of the 6-letter words that are shown, as you can, in 60 seconds. There is a direct feedbackloop when the letters are typed, through colouring of the letters, either red or green. When you have finished you can get your score by email or try again immediately. But be careful, it's addictive! This game is written in HTML, CSS and JavaScript. 
+
+![Responsive gameplay](assets/images/responsive.png)
+
+## Table of Content
+<hr>
+
+[Introduction](#introduction)
+
+[Table of content](#table-of-content)
+
+[Project Goals](#project-goals)
+- [User Goals](#user-goals)
+- [Site owner Goals](#site-owner-goals)
+
+[User Experience](#user-experience)
+- [Target audience](#target-audience)
+- [User Requirements and Expectations](#user-requirements-and-expectations)
+- [User Stories](#user-stories)
+- [Site Owner Stories](#site-owner-stories)
+
+[Design choices](#design-choices)
+
+[Flow chart](#flow-chart)
+
+[Wireframes](#wireframes)
+
+[Technologies used](#technologies-used)
+- [Languages]()
+- [Tools]()
+
+[Features](#features)
+- []()
+- []()
+- []()
+
+[Features for the future](#features-for-the-future)
+
+[Testing](#testing)
+- [Validation testing](#validation-testing)
+- [Bugs & errors](#bugs--errors)
+
+[Deployment](#deployment)
+- [Steps](#steps)
+- [Live link](#live-link)
+- [API](#api)
+
+[Credits](#credits)
+- [Content](#content)
+- [Media](#media)
+- [books](#books)
+
+[Acknowledgments](#acknowledgments)
+<hr>
