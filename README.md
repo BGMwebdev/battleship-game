@@ -86,10 +86,9 @@ Welcome to the Tools for borrow - system. This program aims to make life easier 
     12. As a site owner I want the user to be able to add and find a tool.
     13. As a site owner I want the user to get feedback if a tool is not available or present. 
 
-
-
     ### Scope
-    - 
+    - For the first release I want users to be able to register / log in, search and/or add tools, and be able to read where to borrow them or get feedback when not available or present.
+    - For future releases I would like for users to be able to delete tools from the list and ask for an overview of all present tools. 
     ### User Manual
     - 
 <hr>
