@@ -49,7 +49,19 @@ def explanation():
 
 def registration():
     time.sleep(2)
-    print(input("Please enter your name: "))
+    fname = input("Please enter your first name: ")
+    print(f"Hi {fname}!")
+    lname = input("What is your last name? ")
+    print(f"we now have you registered as: {fname} {lname}")
+    correct = input("Is that correct? y/n ")
+    yes = ""
+    no = ""
+    if correct == y:
+        print("Great! We're almost there...")
+    elif correct == n:
+        print("Let's try that again!")    
+    print("To be able to log in, you need to create a unique password.")
+    
     
 
 def main():
