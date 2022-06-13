@@ -1,6 +1,8 @@
 import gspread
 from google.oauth2.service_account import Credentials
-from time import sleep
+import time
+
+
 
 SCOPE = [
     "https://www.googleapis.com/auth/spreadsheets",
@@ -20,6 +22,9 @@ DIVIDER = '-' * 30
 
 
 def welcome():
+    """
+    Provides a welcome message when program starts running
+    """
     print('')
     print(DIVIDER)
     print('')
@@ -29,14 +34,27 @@ def welcome():
     print('')
     print(DIVIDER)
     print('')
+    
 
-def main_menu():
+def explanation():
+    """
+    Provides an explanation for how to use it and what to expect
+    """
+    time.sleep(2)
     print("To use this application, you first need to register.")
     print("After registration you'll be asked to log in.")
     print("Then you can choose to search or add a tool.")
+    print("when you come back next time, just log in!")
+    print('')
 
-def log_in():
+def registration():
+    time.sleep(2)
+    print(input("Please enter your name: "))
     
 
-welcome()
-main_menu()
+def main():
+    welcome()
+    explanation()
+    registration()
+
+main()
