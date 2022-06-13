@@ -18,37 +18,48 @@ If you have credentials, such as in the Love Sandwiches project, you must create
 Connect your GitHub repository and deploy as normal.
 
 -------------------------------------------------------------
-
+# Tools for borrow
 
 ## Introduction
 <hr>
-Welcome to the tool borrow system. This program aims to help out residents of an appartment building. Through registration the residents are provided with a system that will give inside in and allow them to borrow eachothers tools. 
-
-## Table of Content
+Welcome to the Tools for borrow - system. This program aims to make life easier and cheaper for residents of an appartment building. Through registration the residents are provided with a system that will give insight in, and allow them to, borrow eachothers tools. 
 <hr>
 
-
-## Table of Contents
+## Table of Content
 1. [Project Goals](#project-goals)
-    1. [User Goals](#user-goals)
-    2. [Site Owner Goals](#site-owner-goals)
+    - [User Goals](#user-goals)
+    - [Site Owner Goals](#site-owner-goals)
 2. [User Experience](#user-experience)
-    1. [Target Audience](#target-audience)
-    2. [User Stories](#user-stories)
-    3. [Scope](#scope)
-    4. [User Manual](#user-manual)
+    - [Target Audience](#target-audience)
+    - [User Stories](#user-stories)
+    - [Scope](#scope)
+    - [User Manual](#user-manual)
 3. [Technical Design](#technical-design)
-    1. [Flowchart](#flowchart)
-    2. [Data Models](#data-models)   
+    - [Flowchart](#flowchart)
+    - [Data Models](#data-models)   
 4. [Technologies Used](#technologies-used)
-    1. [Languages](#languages)
-    2. [Frameworks and Tools](#frameworks-and-tools)
+    - [Languages](#languages)
+    - [Frameworks and Tools](#frameworks-and-tools)
 5. [Features](#features)
 6. [Testing](#validation)
-    1. [Python Validation](#Python-validation)
-    2. [Testing user stories](#testing-user-stories)
+    - [Python Validation](#Python-validation)
+    - [Testing user stories](#testing-user-stories)
 8. [Bugs](#Bugs)
 10. [Deployment](#deployment)
 11. [Credits](#credits)
 12. [Acknowledgements](#acknowledgements)
 <hr>
+
+1. ## Project Goals
+    - The goal of this project is ultimately to create a more sustainable way of living.
+    - This project will aim to create a more circular economy through the exchange of equipment / tools, within a set group of people.
+
+    ### User Goals
+    - Be able to register / log in to a safe enviroment.
+    - Add tools to a list, for other residents to use.
+    - Search for the tools that I need.
+
+    ### Site Owner Goals
+    - Create an application with clear purpose.
+    - Create an application that is intuitive and easy to navigate.
+    - Create an application that will support the users need for tools.
