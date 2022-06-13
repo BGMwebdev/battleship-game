@@ -12,8 +12,10 @@ CREDS = Credentials.from_service_account_file('creds.json')
 SCOPED_CREDS = CREDS.with_scopes(SCOPE)
 GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open('tool_data_list')
+
 members = SHEET.worksheet('members')
 data = members.get_all_values()
+
 DIVIDER = '-' * 30
 
 
@@ -29,6 +31,12 @@ def welcome():
     print('')
 
 def main_menu():
-    pass
+    print("To use this application, you first need to register.")
+    print("After registration you'll be asked to log in.")
+    print("Then you can choose to search or add a tool.")
+
+def log_in():
+    
 
 welcome()
+main_menu()
