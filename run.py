@@ -44,9 +44,19 @@ def explanation():
     print("To use this application, you first need to register.")
     print("After registration you'll be asked to log in.")
     print("Then you can choose to search or add a tool.")
-    print("when you come back next time, just log in!")
+    print("when you are already registered, just log in!")
     print('')
     time.sleep(1)
+
+def menu():
+    """
+    Presents the options to register or to log in
+    """
+    print("Please select one of the options below: ")
+    menu_options = "1) Register\n2) Log in\n"
+    menu_option_selected = input(start_options)
+    print('')
+
 
 def registration():
     """
