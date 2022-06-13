@@ -93,6 +93,11 @@ def create_psswd():
         print("It also should contain at least 1 digit.")
         try: 
             password = input("please enter your unique password: ")
+            if password == len(>=6):
+        except ValueError as e:
+            print("Both values have to be integers.")
+    except Exception:
+        print('Another error has occurred')
         except:
             print("Your input doesn't suffice! Let's try that again!")
         else:
