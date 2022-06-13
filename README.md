@@ -63,3 +63,33 @@ Welcome to the Tools for borrow - system. This program aims to make life easier 
     - Create an application with clear purpose.
     - Create an application that is intuitive and easy to navigate.
     - Create an application that will support the users need for tools.
+<hr>
+
+2. ## User Experience
+    ### Target Audience
+    - The target audience is everyone who lives in an appartment building or small community and wants to have a cheaper more co-created way of living, through the sharing of equipment / tools. 
+
+    ### User Stories
+    #### Resident user
+    1. As a first time user I want to have a clear idea of the purpose of the application. 
+    2. As a first time user I want to be able to register for the application.
+    3. As a user I want to be able to log in.
+    4. As a user I want to be able to search for a tool.
+    5. I want to be able to see where I can borrow the tool.
+    6. As a user I want to get feedback if the tool is not available or present.
+    7. As a user I want to be able to add a tool to a list for others to use.
+    8. As a user I want nagivation to be clear and easy.
+    #### Site owner
+    9. As a site owner I want registration and log in to be easy for the user.
+    10. As a site owner I want user names and other information to be saved to a Google Spreadsheet.
+    11. As a site owner I want input to be validated where necessary.
+    12. As a site owner I want the user to be able to add and find a tool.
+    13. As a site owner I want the user to get feedback if a tool is not available or present. 
+
+
+
+    ### Scope
+    - 
+    ### User Manual
+    - 
+<hr>
