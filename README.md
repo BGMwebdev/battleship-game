@@ -89,6 +89,7 @@ Welcome to the Tools for borrow - system. This program aims to make life easier 
     ### Scope
     - For the first release I want users to be able to register / log in, search and/or add tools, and be able to read where to borrow them or get feedback when not available or present.
     - For future releases I would like for users to be able to delete tools from the list and ask for an overview of all present tools. 
+    
     ### User Manual
     - 
 <hr>
