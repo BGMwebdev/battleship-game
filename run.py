@@ -20,6 +20,7 @@ data = members.get_all_values()
 
 DIVIDER = '-' * 50
 
+
 def clear_console():
     """
     This will clear the console
@@ -153,10 +154,12 @@ def log_in():
 
 
 def main():
+    """
+    This is the main function, that will run the application
+    """
     welcome()
     explanation()
-    menu()
-    
+    menu() 
 
 
 main()
