@@ -139,6 +139,8 @@ def registration():
             update_member_worksheet(input_list)
             print('')
             print("Great! We're almost there...\n")
+            time.sleep(3)
+            clear_console()
             break
     create_psswd()
 
@@ -171,34 +173,43 @@ def create_psswd():
     """
     time.sleep(1)
     print("To be able to log in, you need to create a unique password.")
+    print('')
     time.sleep(1)
     while True:
-        print("Your password should have at least 6 characters.")
-        print("Your password should have at least 1 uppercase.")
-        print("It also should contain at least 1 digit.")
-        print("It should not contain any spaces.")
+        print("Here are some rules...")
+        print('')
+        print("Your password should have at least 6 characters")
+        print("At least 1 uppercase")
+        print("At least 1 lowercase")
+        print("At least 1 digit")
+        print("And no spaces")
+        print('')
+        time.sleep(2)
         password = input("please enter your unique password:\n")
 
         error = 0
         if (len(password) < 6):
             error = -1
-            break
+            
         elif not re.search("[a-z]", password):
             error = -1
-            break
+            
         elif not re.search("[A-Z]", password):
             error = -1
-            break
+            
         elif not re.search("[0-9]", password):
             error = -1
-            break
+            
         else:
             error = 0
-            print("Valid Password")
+            print("Great! You gave a valid password.")
             break
     
     if error == -1:
         print("Not a Valid Password")
+        time.sleep(1)
+        print("Let's try again, pay attention to the rules!")
+        time.sleep(1)
 
 
 def log_in():
