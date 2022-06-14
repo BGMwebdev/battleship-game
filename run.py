@@ -121,29 +121,19 @@ def registration():
             break  
 
         
-# def create_psswd():
-#     """
-#     Create a unique password.
-#     """
-#     time.sleep(1)
-#     print("To be able to log in, you need to create a unique password.")
-#     time.sleep(1)
-#     while True:
-#         print("Your password should have at least 6 characters.")
-#         print("It also should contain at least 1 digit.")
-#         try: 
-#             password = input("please enter your unique password: ")
-#             if password == len(>=6):
-#         except ValueError as e:
-#             print("Both values have to be integers.")
-#     except Exception:
-#         print('Another error has occurred')
-#         except:
-#             print("Your input doesn't suffice! Let's try that again!")
-#         else:
-#             print("Your password is valid!")
-#             break
-#         time.sleep(1)
+def create_psswd():
+    """
+    Create a unique password.
+    """
+    time.sleep(1)
+    print("To be able to log in, you need to create a unique password.")
+    time.sleep(1)
+    while True:
+        print("Your password should have at least 6 characters.")
+        print("It also should contain at least 1 digit.")
+        try: 
+            password = input("please enter your unique password: ")
+          
 
 
 def log_in():
