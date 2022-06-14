@@ -82,7 +82,7 @@ def menu():
     elif menu_selected == "2":
         print(f"You choose: {menu_selected}")
         print("Loading...")
-        time.sleep(2)
+        time.sleep(1)
         clear_console()
         log_in()
         
@@ -94,10 +94,10 @@ def registration():
     """
     while 'n':
         time.sleep(1)
-        fname = input("Please enter your first name:\n")
+        fname = input("Please enter your first name:\n").capitalize()
         print(f"Hi {fname}!")
         time.sleep(1)
-        lname = input("What is your last name?\n")
+        lname = input("What is your last name?\n").capitalize()
         print("Registering...")
         print('')
         time.sleep(1)
@@ -116,29 +116,35 @@ def registration():
             print("Let's try that again!") 
             
         elif correct == 'y':
-            reg_input = f'{fname}'.capitalize() + f' {lname}'.capitalize()
+            reg_input = f'{fname} ' + f'{lname}'
             input_list = reg_input.split(" ")
-            validate_registration(input_list)
+            update_member_worksheet(input_list)
             print('')
-            print("Great! We're almost there...")
+            print("Great! We're almost there...\n")
             break  
 
 
-def validate_registration(values):
+def name_validate(data):
     """
-    Validates the quantity of the registration input 
-    to match with the google spreadsheet
+    This wil validate a name to make sure spaces are considered
     """
-    try:
-        if len(values) != 2:
-            raise ValueError(
-                f"All input questions need to be filled in, 
-                    you only provided {len(values)}"
-            )
-    except ValueError as ve:
-        print(f"Invalid data: {ve}, please try again.\n")
+    name_correct = (data).replace(' ', '_')
+    return name_correct
 
-        
+
+def update_member_worksheet(data):
+    """
+    This will update the members worksheet
+    in the google spreadsheet, and add a new row
+    to the list
+    """
+    print("Updating members list...\n")
+    members_worksheet = SHEET.worksheet("members")
+    members_worksheet.append_row(data)
+    time.sleep(1)
+    print("Member registration completed!")
+
+
 # def create_psswd():
 #     """
 #     Create a unique password.
