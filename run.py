@@ -4,7 +4,6 @@ import time
 import os
 
 
-
 SCOPE = [
     "https://www.googleapis.com/auth/spreadsheets",
     "https://www.googleapis.com/auth/drive.file",
@@ -41,7 +40,7 @@ def welcome():
     print('')
     print(DIVIDER)
     print('')
-    
+
 
 def explanation():
     """
@@ -99,29 +98,28 @@ def registration():
         time.sleep(1)
         lname = input("What is your last name? ")
         print("Registering...")
+        print('')
         time.sleep(1)
         print(f"we now have you registered as: {fname} {lname}")
         time.sleep(1)
         correct = input("Is that correct? 'y' for yes or 'n' for no: ")
 
         while correct not in ('n', 'y'):
+            print('')
             print(f"'y' or 'n' is requirred, you provided {correct}.")
             time.sleep(1)
-            y_or_n = input("'y' for yes or 'n' for no: ")
-            if y_or_n == 'n':
-                print("Let's try that again!") 
-                break
-            elif y_or_n == 'y':
-                print("Great! We're almost there...")
-                break  
-
+            correct = input("'y' for yes or 'n' for no: ")
+            
         if correct == 'n':
-            print("Let's try that again!")
+            print('')
+            print("Let's try that again!") 
+            
         elif correct == 'y':
+            print('')
             print("Great! We're almost there...")
-        break    
+            break  
 
-
+        
 # def create_psswd():
 #     """
 #     Create a unique password.
@@ -158,7 +156,7 @@ def main():
     welcome()
     explanation()
     menu()
-    # create_psswd()
+    
 
 
 main()
