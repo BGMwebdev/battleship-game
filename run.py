@@ -133,7 +133,6 @@ def create_psswd():
         print("It also should contain at least 1 digit.")
         try: 
             password = input("please enter your unique password:\n")
-          
 
 
 def log_in():
