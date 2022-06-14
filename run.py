@@ -97,7 +97,7 @@ def registration():
         fname = input("Please enter your first name:\n")
         # This will make sure to have no digits in the name
         while fname.isalpha() is False:
-            print(f"Only letters are required, you provided: {fname}")
+            print(f"Letters are required, you provided: {fname}")
             print('')
             fname = input("Please enter your first name again:\n")
         
@@ -109,7 +109,7 @@ def registration():
         lname = input("What is your last name?\n")
         # This will make sure to have no digits in the name
         while lname.isalpha() is False:
-            print(f"Only letters are required, you provided: {lname}")
+            print(f"Letters are required, you provided: {lname}")
             print('')
             lname = input("Please enter your last name again:\n")
 
