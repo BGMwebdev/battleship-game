@@ -117,10 +117,19 @@ def registration():
             
         elif correct == 'y':
             reg_input = f'{fname}'.capitalize() + f' {lname}'.capitalize()
-            print(reg_input)
+            input_list = reg_input.split(" ")
+            validate_registration(input_list)
             print('')
             print("Great! We're almost there...")
             break  
+
+
+def validate_registration(values):
+    """
+    Validates the quantity of the registration input 
+    to match with the google spreadsheet
+    """
+    print(values)
 
         
 # def create_psswd():
