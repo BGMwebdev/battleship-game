@@ -48,14 +48,29 @@ def explanation():
     print('')
     time.sleep(1)
 
+
 def menu():
     """
-    Presents the options to register or to log in
+    Presents two options, to register or to log in
     """
-    print("Please select one of the options below: ")
+    print("Please select one of the options: ")
     menu_options = "1) Register\n2) Log in\n"
-    menu_option_selected = input(start_options)
+    menu_selected = input(menu_options)
     print('')
+
+    # This will validate the answer and check if 1 or 2 is choosen
+    while menu_selected not in ('1', '2'):
+        print("Please choose option '1' or '2':")
+        menu_selected = input(menu_options)
+        print('')
+
+    if menu_selected == "1":
+        registration()
+
+    elif menu_selected == "2":
+        log_in()
+        
+    print(menu_selected)
 
 
 def registration():
@@ -91,37 +106,43 @@ def registration():
             break    
 
 
-def create_psswd():
-    """
-    Create a unique password.
-    """
-    time.sleep(1)
-    print("To be able to log in, you need to create a unique password.")
-    time.sleep(1)
-    while True:
-        print("Your password should have at least 6 characters.")
-        print("It also should contain at least 1 digit.")
-        try: 
-            password = input("please enter your unique password: ")
-            if password == len(>=6):
-        except ValueError as e:
-            print("Both values have to be integers.")
-    except Exception:
-        print('Another error has occurred')
-        except:
-            print("Your input doesn't suffice! Let's try that again!")
-        else:
-            print("Your password is valid!")
-            break
-        time.sleep(1)
+# def create_psswd():
+#     """
+#     Create a unique password.
+#     """
+#     time.sleep(1)
+#     print("To be able to log in, you need to create a unique password.")
+#     time.sleep(1)
+#     while True:
+#         print("Your password should have at least 6 characters.")
+#         print("It also should contain at least 1 digit.")
+#         try: 
+#             password = input("please enter your unique password: ")
+#             if password == len(>=6):
+#         except ValueError as e:
+#             print("Both values have to be integers.")
+#     except Exception:
+#         print('Another error has occurred')
+#         except:
+#             print("Your input doesn't suffice! Let's try that again!")
+#         else:
+#             print("Your password is valid!")
+#             break
+#         time.sleep(1)
 
+
+def log_in():
+    """
+    This will activate the log in sequence 
+    """
+    print("Log in Function under construction...")
 
 
 def main():
     welcome()
     explanation()
-    registration()
-    create_psswd()
+    menu()
+    # create_psswd()
 
 
 main()
