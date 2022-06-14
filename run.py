@@ -116,6 +116,8 @@ def registration():
             print("Let's try that again!") 
             
         elif correct == 'y':
+            reg_input = f'{fname}'.capitalize() + f' {lname}'.capitalize()
+            print(reg_input)
             print('')
             print("Great! We're almost there...")
             break  
