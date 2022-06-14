@@ -1,6 +1,7 @@
 import gspread
 from google.oauth2.service_account import Credentials
 import time
+import os
 
 
 
@@ -19,6 +20,12 @@ members = SHEET.worksheet('members')
 data = members.get_all_values()
 
 DIVIDER = '-' * 50
+
+def clear_console():
+    """
+    This will clear the console
+    """
+    os.system('clear')
 
 
 def welcome():
@@ -53,7 +60,8 @@ def menu():
     """
     Presents two options, to register or to log in
     """
-    print("Please select one of the options: ")
+    time.sleep(1)
+    print("Please select one of the options and press enter: ")
     menu_options = "1) Register\n2) Log in\n"
     menu_selected = input(menu_options)
     print('')
@@ -65,13 +73,19 @@ def menu():
         print('')
 
     if menu_selected == "1":
+        print(f"You choose: {menu_selected}")
+        print("Loading...")
+        time.sleep(2)
+        clear_console()
         registration()
-
+        
     elif menu_selected == "2":
+        print(f"You choose: {menu_selected}")
+        print("Loading...")
+        time.sleep(2)
+        clear_console()
         log_in()
         
-    print(menu_selected)
-
 
 def registration():
     """
@@ -89,7 +103,8 @@ def registration():
         print(f"we now have you registered as: {fname} {lname}")
         time.sleep(1)
         correct = input("Is that correct? 'y' for yes or 'n' for no: ")
-        while correct != 'n' and correct != 'y':
+
+        while correct not in ('n', 'y'):
             print(f"'y' or 'n' is requirred, you provided {correct}.")
             time.sleep(1)
             y_or_n = input("'y' for yes or 'n' for no: ")
@@ -99,11 +114,12 @@ def registration():
             elif y_or_n == 'y':
                 print("Great! We're almost there...")
                 break  
+
         if correct == 'n':
             print("Let's try that again!")
         elif correct == 'y':
             print("Great! We're almost there...")
-            break    
+        break    
 
 
 # def create_psswd():
