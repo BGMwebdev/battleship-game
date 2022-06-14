@@ -129,6 +129,7 @@ def registration():
 def name_validate(data):
     """
     This wil validate a name to make sure spaces are considered
+    The names are capitalized
     """
     name_correct = (data).capitalize().replace(' ', '_')
     return name_correct
