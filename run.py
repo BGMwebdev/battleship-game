@@ -2,6 +2,7 @@ import gspread
 from google.oauth2.service_account import Credentials
 import time
 import os
+import re
 
 
 SCOPE = [
@@ -138,7 +139,8 @@ def registration():
             update_member_worksheet(input_list)
             print('')
             print("Great! We're almost there...\n")
-            break  
+            break
+    create_psswd()
 
 
 def name_correct(data):
@@ -163,18 +165,40 @@ def update_member_worksheet(data):
     print("Member registration completed!")
 
 
-# def create_psswd():
-#     """
-#     Create a unique password.
-#     """
-#     time.sleep(1)
-#     print("To be able to log in, you need to create a unique password.")
-#     time.sleep(1)
-#     while True:
-#         print("Your password should have at least 6 characters.")
-#         print("It also should contain at least 1 digit.")
-#         try: 
-#             password = input("please enter your unique password:\n")
+def create_psswd():
+    """
+    Create a unique password.
+    """
+    time.sleep(1)
+    print("To be able to log in, you need to create a unique password.")
+    time.sleep(1)
+    while True:
+        print("Your password should have at least 6 characters.")
+        print("Your password should have at least 1 uppercase.")
+        print("It also should contain at least 1 digit.")
+        print("It should not contain any spaces.")
+        password = input("please enter your unique password:\n")
+
+        error = 0
+        if (len(password) < 6):
+            error = -1
+            break
+        elif not re.search("[a-z]", password):
+            error = -1
+            break
+        elif not re.search("[A-Z]", password):
+            error = -1
+            break
+        elif not re.search("[0-9]", password):
+            error = -1
+            break
+        else:
+            error = 0
+            print("Valid Password")
+            break
+    
+    if error == -1:
+        print("Not a Valid Password")
 
 
 def log_in():
