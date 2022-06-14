@@ -94,14 +94,16 @@ def registration():
     """
     while 'n':
         time.sleep(1)
-        fname = input("Please enter your first name:\n").capitalize()
-        print(f"Hi {fname}!")
+        fname = input("Please enter your first name:\n")
+        update_fname = name_validate(fname)
+        print(f"Hi {update_fname}!")
         time.sleep(1)
-        lname = input("What is your last name?\n").capitalize()
+        lname = input("What is your last name?\n")
+        update_lname = name_validate(lname)
         print("Registering...")
         print('')
         time.sleep(1)
-        print(f"we now have you registered as: {fname} {lname}")
+        print(f"we now have you registered as: {update_fname} {update_lname}")
         time.sleep(1)
         correct = input("Is that correct? 'y' for yes or 'n' for no:\n")
 
@@ -116,7 +118,7 @@ def registration():
             print("Let's try that again!") 
             
         elif correct == 'y':
-            reg_input = f'{fname} ' + f'{lname}'
+            reg_input = f'{update_fname} ' + f'{update_lname}'
             input_list = reg_input.split(" ")
             update_member_worksheet(input_list)
             print('')
@@ -128,7 +130,7 @@ def name_validate(data):
     """
     This wil validate a name to make sure spaces are considered
     """
-    name_correct = (data).replace(' ', '_')
+    name_correct = (data).capitalize().replace(' ', '_')
     return name_correct
 
 
