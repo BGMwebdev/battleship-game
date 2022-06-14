@@ -129,7 +129,14 @@ def validate_registration(values):
     Validates the quantity of the registration input 
     to match with the google spreadsheet
     """
-    print(values)
+    try:
+        if len(values) != 2:
+            raise ValueError(
+                f"All input questions need to be filled in, 
+                    you only provided {len(values)}"
+            )
+    except ValueError as ve:
+        print(f"Invalid data: {ve}, please try again.\n")
 
         
 # def create_psswd():
