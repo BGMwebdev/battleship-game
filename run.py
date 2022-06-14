@@ -94,22 +94,22 @@ def registration():
     """
     while 'n':
         time.sleep(1)
-        fname = input("Please enter your first name: ")
+        fname = input("Please enter your first name:\n")
         print(f"Hi {fname}!")
         time.sleep(1)
-        lname = input("What is your last name? ")
+        lname = input("What is your last name?\n")
         print("Registering...")
         print('')
         time.sleep(1)
         print(f"we now have you registered as: {fname} {lname}")
         time.sleep(1)
-        correct = input("Is that correct? 'y' for yes or 'n' for no: ")
+        correct = input("Is that correct? 'y' for yes or 'n' for no:\n")
 
         while correct not in ('n', 'y'):
             print('')
             print(f"'y' or 'n' is requirred, you provided {correct}.")
             time.sleep(1)
-            correct = input("'y' for yes or 'n' for no: ")
+            correct = input("'y' for yes or 'n' for no:\n")
             
         if correct == 'n':
             print('')
@@ -132,7 +132,7 @@ def create_psswd():
         print("Your password should have at least 6 characters.")
         print("It also should contain at least 1 digit.")
         try: 
-            password = input("please enter your unique password: ")
+            password = input("please enter your unique password:\n")
           
 
 
