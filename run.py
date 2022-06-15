@@ -246,26 +246,28 @@ def existing_member(user_lname):
     member_data = SHEET.worksheet('members')
     login_name = member_data.col_values(2)
     if (user_lname) in login_name:
+        # cell = (user_lname)
         print(f"Last name found. Welcome back {user_lname}")
+        print(member_data.cell)
         return True
     else:
         print("\nLast name not found, please try again.\n")
         return False
 
 
-def check_password(user_psswd):
-    """
-    Checks if the password is correct
-    by looping through the row of the last name given
-    """
+# def check_password(user_psswd):
+#     """
+#     Checks if the password is correct
+#     by looping through the row of the last name given
+#     """
 
-    member_data = SHEET.worksheet('members')
-    psswd_row = member_data.row_values(???)
-    if (user_psswd) in psswd_row:
-        return True
-    else:
-        print("\n Password is incorrect! Please try again.")
-        return False
+#     member_data = SHEET.worksheet('members')
+#     psswd_row = member_data.row_values(???)
+#     if (user_psswd) in psswd_row:
+#         return True
+#     else:
+#         print("\n Password is incorrect! Please try again.")
+#         return False
 
 
 def main():
@@ -278,4 +280,52 @@ def main():
 
 
 # main()
-log_in()
+# log_in()
+
+
+def name_row_number():
+    user_lname = input('Enter your last name: \n').capitalize()
+    worksheet = SHEET.worksheet('members')
+    login_names = worksheet.col_values(2)
+    lname_row_number = 1
+    for x in login_names:
+        if x == user_lname:
+            list_psswd_check(lname_row_number)
+        lname_row_number += 1
+
+
+def list_psswd_check(lname_row_number):
+    """
+    check password in list
+    """
+    worksheet = SHEET.worksheet('members')
+    login_list = worksheet.row_values(lname_row_number)
+    return login_list
+
+
+def password_val():
+    """
+    password check
+    """
+    worksheet = SHEET.worksheet('members')
+    psswd = input("password: ")
+    values_list = worksheet.row_values(3)
+    if psswd in values_list:
+        print("Tadaa!")
+    else:
+        print("Jammer!!")
+
+
+
+     
+
+
+
+
+def log_in_main():
+    """
+    Main login function
+    """
+    name_row_number()
+    password_val()
+    
