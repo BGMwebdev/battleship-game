@@ -187,38 +187,77 @@ def create_psswd():
         time.sleep(2)
         password = input("please enter your unique password:\n")
 
-        error = 0
-        if (len(password) < 6):
-            error = -1
-            break
-            
-        elif not re.search("[a-z]", password):
-            error = -1
-            break
-            
-        elif not re.search("[A-Z]", password):
-            error = -1
-            break
-            
-        elif not re.search("[0-9]", password):
-            error = -1
-            break
 
-        else:
-            error = 0
-            print("Great! You gave a valid password.")
-            save_psswd(password)
-            break
+
+def password_check(passwd):
+      
+    SpecialSym =['$', '@', '#', '%']
+    val = True
+      
+    if len(passwd) < 6:
+        print('length should be at least 6')
+        val = False
+          
+    if len(passwd) > 20:
+        print('length should be not be greater than 8')
+        val = False
+          
+    if not any(char.isdigit() for char in passwd):
+        print('Password should have at least one numeral')
+        val = False
+          
+    if not any(char.isupper() for char in passwd):
+        print('Password should have at least one uppercase letter')
+        val = False
+          
+    if not any(char.islower() for char in passwd):
+        print('Password should have at least one lowercase letter')
+        val = False
+          
+    if not any(char in SpecialSym for char in passwd):
+        print('Password should have at least one of the symbols $@#')
+        val = False
+    if val:
+        return val
+
+
+
+
+    #     error = 0
+    #     if (len(password) < 6):
+    #         error = -1
+    #         break
             
-    if error == -1:
-        print("Not a Valid Password")
-        time.sleep(1)
-        print("Let's try again, pay attention to the rules!")
-        time.sleep(1)
+    #     elif not re.search("[a-z]", password):
+    #         error = -1
+    #         break
+            
+    #     elif not re.search("[A-Z]", password):
+    #         error = -1
+    #         break
+            
+    #     elif not re.search("[0-9]", password):
+    #         error = -1
+    #         break
+
+    #     else:
+    #         error = 0
+    #         print("Great! You gave a valid password.")
+    #         save_psswd(password)
+    #         break
+            
+    # if error == -1:
+    #     print("Not a Valid Password")
+    #     time.sleep(1)
+    #     print("Let's try again, pay attention to the rules!")
+    #     time.sleep(1)
 
 
 def save_psswd(data):
-    members_worksheet = SHEET.worksheet(members)
+    """
+    This will save the password to the spreadsheet column of password
+    """
+    members_worksheet = SHEET.worksheet('members')    
     psswd_column = members_worksheet.col_values(3)
     psswd_column.append(data)
 
