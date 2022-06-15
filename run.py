@@ -16,7 +16,6 @@ GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open('tool_data_list')
 
 members = SHEET.worksheet('members')
-data = members.get_all_values()
 
 DIVIDER = '-' * 50
 
@@ -139,6 +138,7 @@ def registration():
             clear_console()
             password = create_psswd()
         break
+    # This will create a list out of the input for the worksheet
     registr_input = f'{update_fname} ' + f'{update_lname} ' + f'{password}'
     input_list = registr_input.split(" ")
     update_member_worksheet(input_list)
@@ -164,6 +164,8 @@ def update_member_worksheet(data):
     members_worksheet.append_row(data)
     time.sleep(1)
     print("Member registration completed!")
+    print('')
+    print("You are now ready to log in!")
 
 
 def create_psswd():
@@ -185,14 +187,7 @@ def create_psswd():
         password = input("please enter your unique password:\n")
         if (password_check(password)):
             print("Password is valid")
-            print("Updating password...\n")
-            # list_psswd = (password).split(" ")
-            # save_psswd(password)
             time.sleep(1)
-            print("Password registration completed!")
-            time.sleep(1)
-            print('')
-            print("You are now ready to log in!")
             return password
         break
    
@@ -221,17 +216,6 @@ def password_check(password):
     
     if val:
         return val
-
-
-# def save_psswd(password):
-#     """
-#     This will save the password to the spreadsheet column of password
-#     """
-#     members_worksheet = SHEET.worksheet('members')    
-#     psswd_column = members_worksheet.col_values(3)
-#     print(psswd_column)
-#     psswd_column.append(password)
-#     print(psswd_column)
 
 
 def log_in():
