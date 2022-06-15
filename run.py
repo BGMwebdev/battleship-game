@@ -224,33 +224,38 @@ def log_in():
     user input to spreadsheet 
     """
     time.sleep(2)
-    members = SHEET.worksheet(members)
+    
     print(('Tools members login').upper())
     print('')
-    user_lname = input('\nEnter your last name: \n')
+    user_lname = input('\nEnter your last name: \n').capitalize()
     user_psswd = input('\nPassword: \n')
+    member_data = SHEET.worksheet('members')
+    login_name = member_data.col_values(2)
+    for x in login_name:
+        print(x)
+        if not x == user_lname:
+            print('\nNo such user found')
+            print('\nPlease check and try again.\n')
+            log_in()
 
-def login():
-    """
-    Function to take user input (uid and password) and compare
-    to gsheet data record
-    """
-  
-    logins = get_logins()
-    if not [x for x in logins if x['username'] == uid]:
-        print('\nNo such user found')
-        print('\nPlease check and try again.')
-        login()
-    else:
-        matched_uid = [x for x in logins if x['username'] == uid][0]
-    if pwd == matched_uid['password']:
-        print('\nLogin successful')
-        main_menu()
-    else:
-        print('\nLogin failed')
-        print('\nPassword did not match.')
-        print('\nPlease try again.')
-        login()
+
+    # login_data = get_logins()
+    # for x in login_data:
+    #     if not x['lname'] == user_lname:
+    #         print('\nNo such user found')
+    #         print('\nPlease check and try again.')
+    #         log_in()
+    #     elif x['lname'] == user_lname:
+            
+    #     matched_userid = [x for x in login_data if [0]
+    # if user_psswd == matched_userid['password']:
+    #     print('\nLogin successful')
+    #     # main_menu()
+    # else:
+    #     print('\nLogin failed')
+    #     print('\nPassword did not match.')
+    #     print('\nPlease try again.')
+    #     log_in()
 
 
 def get_logins() -> list:
@@ -258,7 +263,8 @@ def get_logins() -> list:
     Pull all values from logins work sheet and return as list
     of lists
     """
-    login_data = LOGINS.get_all_records()
+    member_data = SHEET.worksheet('members')
+    login_data = member_data.get_all_records()
     return login_data
 
 
@@ -271,4 +277,5 @@ def main():
     menu() 
 
 
-main()
+# main()
+log_in()
