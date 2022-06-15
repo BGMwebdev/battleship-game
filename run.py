@@ -303,12 +303,17 @@ def list_psswd_check(lname_row_number):
     return login_list
     
 
-def password_val():
+def password_val(list_psswd):
     """
     password check
     """
-    
-
+    while True:
+        input_psswd = input("Please enter your unique password: ")
+        if input_psswd == list_psswd[2]:
+            print("Gelukt! Mazzelpik! werd tijd! lekker bezig ouwe!!")
+            break
+        else:
+            print("Jammer pik!")
 
 def log_in_main():
     """
@@ -316,8 +321,8 @@ def log_in_main():
     """
     row_number = name_row_number()
     list_psswd = list_psswd_check(row_number)
-    # password_val()
-    print(list_psswd)
+    password_val(list_psswd)
+    
     
 
 log_in_main()
