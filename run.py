@@ -137,7 +137,7 @@ def registration():
             time.sleep(3)
             clear_console()
             password = create_psswd()
-        break
+            break
     # This will create a list out of the input for the worksheet
     registr_input = f'{update_fname} ' + f'{update_lname} ' + f'{password}'
     input_list = registr_input.split(" ")
@@ -176,20 +176,20 @@ def create_psswd():
     print("To be able to log in, you need to create a unique password.")
     print('')
     time.sleep(1)
-    while True: 
-        print("Your password should have at least 6 characters")
-        print("At least 1 uppercase")
-        print("At least 1 lowercase")
-        print("At least 1 digit")
-        print("And no spaces")
-        print('')
+    print("Your password should have at least 6 characters")
+    print("At least 1 uppercase")
+    print("At least 1 lowercase")
+    print("At least 1 digit")
+    print("And no spaces")
+    print('')
+    while True:    
         time.sleep(2)
         password = input("please enter your unique password:\n")
         if (password_check(password)):
-            print("Password is valid")
+            print("Password is valid\n")
             time.sleep(1)
             return password
-        break
+            break
    
 
 def password_check(password):
