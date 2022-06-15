@@ -220,10 +220,49 @@ def password_check(password):
 
 def log_in():
     """
-    This will activate the log in sequence 
+    This will activate the log in sequence, and compare
+    user input to spreadsheet 
     """
     time.sleep(2)
-    print("Log in Function under construction...")
+    members = SHEET.worksheet(members)
+    print(('Tools members login').upper())
+
+
+def login():
+    """
+    Function to take user input (uid and password) and compare
+    to gsheet data record
+    """
+    print(DIVIDER)
+    print(('Mitsuruki Automotive Systems').upper())
+    print(('Fleet management user login').upper())
+    print(DIVIDER)
+    uid = input('\nEnter username: \n')
+    pwd = input('\nPassword: \n')
+    logins = get_logins()
+    if not [x for x in logins if x['username'] == uid]:
+        print('\nNo such user found')
+        print('\nPlease check and try again.')
+        login()
+    else:
+        matched_uid = [x for x in logins if x['username'] == uid][0]
+    if pwd == matched_uid['password']:
+        print('\nLogin successful')
+        main_menu()
+    else:
+        print('\nLogin failed')
+        print('\nPassword did not match.')
+        print('\nPlease try again.')
+        login()
+
+
+def get_logins() -> list:
+    """
+    Pull all values from logins work sheet and return as list
+    of lists
+    """
+    login_data = LOGINS.get_all_records()
+    return login_data
 
 
 def main():
