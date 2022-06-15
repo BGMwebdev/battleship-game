@@ -189,7 +189,8 @@ def create_psswd():
         if (password_check(password)):
             print("Password is valid")
             print("Updating password...\n")
-            save_psswd(data)
+            convert_psswd_to_string(password)
+            save_psswd(convert_psswd_to_string)
             time.sleep(1)
             print("Password registration completed!")
             time.sleep(1)
@@ -224,13 +225,21 @@ def password_check(password):
         return val
 
 
-def save_psswd(data):
+def save_psswd(password):
     """
     This will save the password to the spreadsheet column of password
     """
     members_worksheet = SHEET.worksheet('members')    
     psswd_column = members_worksheet.col_values(3)
-    psswd_column.append(data)
+    psswd_column.append(password)
+
+
+def convert_psswd_to_string(password):
+    """
+    This will convert the password to a list to be added to the spreadsheet
+    """
+    list_psswd = (password).split(" ")
+    return list_psswd
 
 
 def log_in():
