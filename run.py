@@ -175,22 +175,27 @@ def create_psswd():
     print("To be able to log in, you need to create a unique password.")
     print('')
     time.sleep(1)
-    while True:
-        print("Here are some rules...")
-        print('')
-        print("Your password should have at least 6 characters")
-        print("At least 1 uppercase")
-        print("At least 1 lowercase")
-        print("At least 1 digit")
-        print("And no spaces")
-        print('')
-        time.sleep(2)
+    print("Here are some rules...")
+    print('')
+    print("Your password should have at least 6 characters")
+    print("At least 1 uppercase")
+    print("At least 1 lowercase")
+    print("At least 1 digit")
+    print("And no spaces")
+    print('')
+    time.sleep(2)
+    while True: 
         password = input("please enter your unique password:\n")
         if (password_check(password)):
             print("Password is valid")
+            print("Updating password...\n")
+            save_psswd(data)
+            time.sleep(1)
+            print("Password registration completed!")
+            time.sleep(1)
+            print('')
+            print("You are now ready to log in!")
             break
-        else:
-            print("Invalid Password !!")
    
 
 def password_check(password):
@@ -217,38 +222,6 @@ def password_check(password):
     
     if val:
         return val
-
-
-
-
-    #     error = 0
-    #     if (len(password) < 6):
-    #         error = -1
-    #         break
-            
-    #     elif not re.search("[a-z]", password):
-    #         error = -1
-    #         break
-            
-    #     elif not re.search("[A-Z]", password):
-    #         error = -1
-    #         break
-            
-    #     elif not re.search("[0-9]", password):
-    #         error = -1
-    #         break
-
-    #     else:
-    #         error = 0
-    #         print("Great! You gave a valid password.")
-    #         save_psswd(password)
-    #         break
-            
-    # if error == -1:
-    #     print("Not a Valid Password")
-    #     time.sleep(1)
-    #     print("Let's try again, pay attention to the rules!")
-    #     time.sleep(1)
 
 
 def save_psswd(data):
