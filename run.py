@@ -227,45 +227,33 @@ def log_in():
     
     print(('Tools members login').upper())
     print('')
-    user_lname = input('\nEnter your last name: \n').capitalize()
-    user_psswd = input('\nPassword: \n')
+    while True:
+        user_lname = input('Enter your last name: \n').capitalize()
+        if existing_member(user_lname):
+            user_psswd = input('\nPlease enter your password: \n')
+            if check_password(user_psswd):
+                print("You're password is correct!")
+                print("Logging in...")
+                time.sleep(2)
+
+
+
+def existing_member(user_lname):
+    """
+    Checks if the last name is aready registered by looping through
+    the column of the llast name in the worksheet
+    """
     member_data = SHEET.worksheet('members')
     login_name = member_data.col_values(2)
-    for x in login_name:
-        print(x)
-        if not x == user_lname:
-            print('\nNo such user found')
-            print('\nPlease check and try again.\n')
-            log_in()
+    if (user_lname) in login_name:
+        return True
+    else:
+        print("\nLast name not found, please try again.\n")
+        return False
 
 
-    # login_data = get_logins()
-    # for x in login_data:
-    #     if not x['lname'] == user_lname:
-    #         print('\nNo such user found')
-    #         print('\nPlease check and try again.')
-    #         log_in()
-    #     elif x['lname'] == user_lname:
-            
-    #     matched_userid = [x for x in login_data if [0]
-    # if user_psswd == matched_userid['password']:
-    #     print('\nLogin successful')
-    #     # main_menu()
-    # else:
-    #     print('\nLogin failed')
-    #     print('\nPassword did not match.')
-    #     print('\nPlease try again.')
-    #     log_in()
+def check_password(user_psswd):
 
-
-def get_logins() -> list:
-    """
-    Pull all values from logins work sheet and return as list
-    of lists
-    """
-    member_data = SHEET.worksheet('members')
-    login_data = member_data.get_all_records()
-    return login_data
 
 
 def main():
