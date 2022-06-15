@@ -190,26 +190,37 @@ def create_psswd():
         error = 0
         if (len(password) < 6):
             error = -1
+            break
             
         elif not re.search("[a-z]", password):
             error = -1
+            break
             
         elif not re.search("[A-Z]", password):
             error = -1
+            break
             
         elif not re.search("[0-9]", password):
             error = -1
-            
+            break
+
         else:
             error = 0
             print("Great! You gave a valid password.")
+            save_psswd(password)
             break
-    
+            
     if error == -1:
         print("Not a Valid Password")
         time.sleep(1)
         print("Let's try again, pay attention to the rules!")
         time.sleep(1)
+
+
+def save_psswd(data):
+    members_worksheet = SHEET.worksheet(members)
+    psswd_column = members_worksheet.col_values(3)
+    psswd_column.append(data)
 
 
 def log_in():
