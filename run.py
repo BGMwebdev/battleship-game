@@ -290,7 +290,7 @@ def name_row_number():
     lname_row_number = 1
     for x in login_names:
         if x == user_lname:
-            list_psswd_check(lname_row_number)
+            return lname_row_number
         lname_row_number += 1
 
 
@@ -301,31 +301,23 @@ def list_psswd_check(lname_row_number):
     worksheet = SHEET.worksheet('members')
     login_list = worksheet.row_values(lname_row_number)
     return login_list
-
+    
 
 def password_val():
     """
     password check
     """
-    worksheet = SHEET.worksheet('members')
-    psswd = input("password: ")
-    values_list = worksheet.row_values(3)
-    if psswd in values_list:
-        print("Tadaa!")
-    else:
-        print("Jammer!!")
-
-
-
-     
-
-
+    
 
 
 def log_in_main():
     """
     Main login function
     """
-    name_row_number()
-    password_val()
+    row_number = name_row_number()
+    list_psswd = list_psswd_check(row_number)
+    # password_val()
+    print(list_psswd)
     
+
+log_in_main()
