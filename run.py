@@ -186,37 +186,35 @@ def create_psswd():
         print('')
         time.sleep(2)
         password = input("please enter your unique password:\n")
+        if (password_check(password)):
+            print("Password is valid")
+            break
+        else:
+            print("Invalid Password !!")
+   
 
-
-
-def password_check(passwd):
-      
-    SpecialSym =['$', '@', '#', '%']
+def password_check(password):
+    """
+    Checks if password is valid
+    """
     val = True
       
-    if len(passwd) < 6:
+    if len(password) < 6:
         print('length should be at least 6')
         val = False
           
-    if len(passwd) > 20:
-        print('length should be not be greater than 8')
-        val = False
-          
-    if not any(char.isdigit() for char in passwd):
-        print('Password should have at least one numeral')
-        val = False
-          
-    if not any(char.isupper() for char in passwd):
+    if not any(char.isupper() for char in password):
         print('Password should have at least one uppercase letter')
         val = False
-          
-    if not any(char.islower() for char in passwd):
+    
+    if not any(char.islower() for char in password):
         print('Password should have at least one lowercase letter')
         val = False
-          
-    if not any(char in SpecialSym for char in passwd):
-        print('Password should have at least one of the symbols $@#')
+    
+    if not any(char.isdigit() for char in password):
+        print('Password should have at least one digit')
         val = False
+    
     if val:
         return val
 
