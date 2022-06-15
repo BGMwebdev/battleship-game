@@ -2,7 +2,6 @@ import gspread
 from google.oauth2.service_account import Credentials
 import time
 import os
-import re
 
 
 SCOPE = [
@@ -134,15 +133,15 @@ def registration():
             print("Let's try that again!") 
             
         elif correct == 'y':
-            reg_input = f'{update_fname} ' + f'{update_lname}'
-            input_list = reg_input.split(" ")
-            update_member_worksheet(input_list)
             print('')
             print("Great! We're almost there...\n")
             time.sleep(3)
             clear_console()
-            break
-    create_psswd()
+            password = create_psswd()
+        break
+    registr_input = f'{update_fname} ' + f'{update_lname} ' + f'{password}'
+    input_list = registr_input.split(" ")
+    update_member_worksheet(input_list)
 
 
 def name_correct(data):
@@ -175,28 +174,27 @@ def create_psswd():
     print("To be able to log in, you need to create a unique password.")
     print('')
     time.sleep(1)
-    print("Here are some rules...")
-    print('')
-    print("Your password should have at least 6 characters")
-    print("At least 1 uppercase")
-    print("At least 1 lowercase")
-    print("At least 1 digit")
-    print("And no spaces")
-    print('')
-    time.sleep(2)
     while True: 
+        print("Your password should have at least 6 characters")
+        print("At least 1 uppercase")
+        print("At least 1 lowercase")
+        print("At least 1 digit")
+        print("And no spaces")
+        print('')
+        time.sleep(2)
         password = input("please enter your unique password:\n")
         if (password_check(password)):
             print("Password is valid")
             print("Updating password...\n")
-            convert_psswd_to_string(password)
-            save_psswd(convert_psswd_to_string)
+            # list_psswd = (password).split(" ")
+            # save_psswd(password)
             time.sleep(1)
             print("Password registration completed!")
             time.sleep(1)
             print('')
             print("You are now ready to log in!")
-            break
+            return password
+        break
    
 
 def password_check(password):
@@ -225,27 +223,22 @@ def password_check(password):
         return val
 
 
-def save_psswd(password):
-    """
-    This will save the password to the spreadsheet column of password
-    """
-    members_worksheet = SHEET.worksheet('members')    
-    psswd_column = members_worksheet.col_values(3)
-    psswd_column.append(password)
-
-
-def convert_psswd_to_string(password):
-    """
-    This will convert the password to a list to be added to the spreadsheet
-    """
-    list_psswd = (password).split(" ")
-    return list_psswd
+# def save_psswd(password):
+#     """
+#     This will save the password to the spreadsheet column of password
+#     """
+#     members_worksheet = SHEET.worksheet('members')    
+#     psswd_column = members_worksheet.col_values(3)
+#     print(psswd_column)
+#     psswd_column.append(password)
+#     print(psswd_column)
 
 
 def log_in():
     """
     This will activate the log in sequence 
     """
+    time.sleep(2)
     print("Log in Function under construction...")
 
 
