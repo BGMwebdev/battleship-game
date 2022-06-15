@@ -235,7 +235,7 @@ def log_in():
                 print("You're password is correct!")
                 print("Logging in...")
                 time.sleep(2)
-
+                break
 
 
 def existing_member(user_lname):
@@ -246,6 +246,7 @@ def existing_member(user_lname):
     member_data = SHEET.worksheet('members')
     login_name = member_data.col_values(2)
     if (user_lname) in login_name:
+        print(f"Last name found. Welcome back {user_lname}")
         return True
     else:
         print("\nLast name not found, please try again.\n")
@@ -253,7 +254,18 @@ def existing_member(user_lname):
 
 
 def check_password(user_psswd):
+    """
+    Checks if the password is correct
+    by looping through the row of the last name given
+    """
 
+    member_data = SHEET.worksheet('members')
+    psswd_row = member_data.row_values('user_lname')
+    if (user_psswd) in psswd_row:
+        return True
+    else:
+        print("\n Password is incorrect! Please try again.")
+        return False
 
 
 def main():
