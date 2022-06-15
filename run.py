@@ -226,19 +226,16 @@ def log_in():
     time.sleep(2)
     members = SHEET.worksheet(members)
     print(('Tools members login').upper())
-
+    print('')
+    user_lname = input('\nEnter your last name: \n')
+    user_psswd = input('\nPassword: \n')
 
 def login():
     """
     Function to take user input (uid and password) and compare
     to gsheet data record
     """
-    print(DIVIDER)
-    print(('Mitsuruki Automotive Systems').upper())
-    print(('Fleet management user login').upper())
-    print(DIVIDER)
-    uid = input('\nEnter username: \n')
-    pwd = input('\nPassword: \n')
+  
     logins = get_logins()
     if not [x for x in logins if x['username'] == uid]:
         print('\nNo such user found')
