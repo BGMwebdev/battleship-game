@@ -146,12 +146,12 @@ def registration():
         elif correct == 'y':
             print('')
             print("Great! We're almost there...\n")
-            time.sleep(3)
+            time.sleep(2)
             clear_console()
             password = create_psswd()
             break
     # This will create a list out of the input for the worksheet
-    reg = f'{upd_fname} ' + f'{upd_lname} ' + f'{phone}' + f'{password}'
+    reg = f'{upd_fname} ' + f'{upd_lname} ' + f'{phone} ' + f'{password}'
     input_list = reg.split(" ")
     update_member_worksheet(input_list)
 
@@ -178,7 +178,7 @@ def update_member_worksheet(data):
     print("Member registration completed!")
     print('')
     print("You are now ready to log in!")
-    time.sleep(1)
+    time.sleep(2)
     clear_console()
     log_in_main()
 
@@ -202,7 +202,7 @@ def create_psswd():
         password = input("please enter your unique password:\n")
         if (password_check(password)):
             print("Password is valid\n")
-            time.sleep(1)
+            time.sleep(2)
             return password
             break
    
@@ -377,7 +377,7 @@ def return_overview_tools(lname_row_number):
         print(i)
     time.sleep(2)
     print("\nWhen you're ready, please select one of the options: ")
-    menu_options = "1) Main menu\n2) Exit\n"
+    menu_options = "1) Back to main menu\n2) Exit\n"
     menu_selected = input(menu_options)
     print('')
 
@@ -388,7 +388,7 @@ def return_overview_tools(lname_row_number):
         print('')
 
     if menu_selected == "1":
-        print("You choose main menu.")
+        print("You choose back to main menu.")
         print("Loading...")
         time.sleep(1)
         main_menu()
@@ -409,6 +409,22 @@ def add_tool():
     return_overview_tools(right_row)
 
 
+def search_for_tool():
+    search_input = input("What tool are you looking for?\n")
+    while True:        
+        if members.find(search_input):
+            result_row = members.find(search_input).row
+            match_list = members.row_values(result_row)
+            print()
+            print("You're in luck!!")
+            print(f"We've found the {search_input} you're looking for!")
+            print(f"Your neighbour is: {match_list[0]} {match_list[1]}") 
+            print(f"You can reach them on: {match_list[2]}")
+            break
+        else:
+            print("No match found! Try again:")
+
+
 def main():
     """
     This is the main function, that will run the application
@@ -419,4 +435,5 @@ def main():
     main_menu()
 
 
-main()
+# main()
+search_for_tool()
