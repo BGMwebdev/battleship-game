@@ -49,13 +49,17 @@ def explanation():
     time.sleep(2)
     print("To use this application, you first need to register.")
     print("After registration you'll be asked to log in.")
-    print("Then you can choose to search or add a tool.")
     print("when you are already registered, just log in!")
+    print('')
+    print("After that you can choose to search a tool.")
+    print("Or you can choose to add a tool.")
+    print('')
+    print("First things first...")
     print('')
     time.sleep(1)
 
 
-def menu():
+def start_menu():
     """
     Presents two options, to register or to log in
     """
@@ -72,18 +76,18 @@ def menu():
         print('')
 
     if menu_selected == "1":
-        print(f"You choose: {menu_selected}")
+        print("You choose to register.")
         print("Loading...")
         time.sleep(2)
         clear_console()
         registration()
         
     elif menu_selected == "2":
-        print(f"You choose: {menu_selected}")
+        print("You choose to log in.")
         print("Loading...")
         time.sleep(1)
         clear_console()
-        log_in()
+        log_in_main()
         
 
 def registration():
@@ -166,6 +170,9 @@ def update_member_worksheet(data):
     print("Member registration completed!")
     print('')
     print("You are now ready to log in!")
+    time.sleep(1)
+    clear_console()
+    log_in_main()
 
 
 def create_psswd():
@@ -218,78 +225,17 @@ def password_check(password):
         return val
 
 
-def log_in():
-    """
-    This will activate the log in sequence, and compare
-    user input to spreadsheet 
-    """
-    time.sleep(2)
-    
-    print(('Tools members login').upper())
-    print('')
-    while True:
-        user_lname = input('Enter your last name: \n').capitalize()
-        if existing_member(user_lname):
-            user_psswd = input('\nPlease enter your password: \n')
-            if check_password(user_psswd):
-                print("You're password is correct!")
-                print("Logging in...")
-                time.sleep(2)
-                break
-
-
-def existing_member(user_lname):
-    """
-    Checks if the last name is aready registered by looping through
-    the column of the llast name in the worksheet
-    """
-    member_data = SHEET.worksheet('members')
-    login_name = member_data.col_values(2)
-    if (user_lname) in login_name:
-        # cell = (user_lname)
-        print(f"Last name found. Welcome back {user_lname}")
-        print(member_data.cell)
-        return True
-    else:
-        print("\nLast name not found, please try again.\n")
-        return False
-
-
-# def check_password(user_psswd):
-#     """
-#     Checks if the password is correct
-#     by looping through the row of the last name given
-#     """
-
-#     member_data = SHEET.worksheet('members')
-#     psswd_row = member_data.row_values(???)
-#     if (user_psswd) in psswd_row:
-#         return True
-#     else:
-#         print("\n Password is incorrect! Please try again.")
-#         return False
-
-
-def main():
-    """
-    This is the main function, that will run the application
-    """
-    welcome()
-    explanation()
-    menu() 
-
-
-# main()
-# log_in()
-
-
 def name_row_number():
+    """
+    With a for loop the row number of the name input is returned
+    """
     user_lname = input('Enter your last name: \n').capitalize()
     worksheet = SHEET.worksheet('members')
     login_names = worksheet.col_values(2)
     lname_row_number = 1
     for x in login_names:
         if x == user_lname:
+            print("Your name has been found.")
             return lname_row_number
         lname_row_number += 1
 
@@ -308,12 +254,18 @@ def password_val(list_psswd):
     password check
     """
     while True:
-        input_psswd = input("Please enter your unique password: ")
+        input_psswd = input("\nPlease enter your unique password: \n")
         if input_psswd == list_psswd[2]:
-            print("Gelukt! Mazzelpik! werd tijd! lekker bezig ouwe!!")
+            time.sleep(1)
+            print("\nYour password is correct.")
+            print("Welkom back!\n")
+            time.sleep(1)
+            clear_console()
             break
         else:
-            print("Jammer pik!")
+            time.sleep(1)
+            print("\nYour password is incorrect.")
+
 
 def log_in_main():
     """
@@ -322,7 +274,76 @@ def log_in_main():
     row_number = name_row_number()
     list_psswd = list_psswd_check(row_number)
     password_val(list_psswd)
-    
+
+
+def main_menu():
+    """
+    Presents three options
+    to add a tool, to search for a tool or to exit
+    """
+    time.sleep(1)
+    print("Welcome to the main menu!")
+    print("Please select one of the options and press enter: ")
+    menu_options = "1) Add a tool\n2) Search for a tool\n3) Exit\n"
+    menu_selected = input(menu_options)
+    print('')
+
+    # This will validate the answer and check if 1 or 2 is choosen
+    while menu_selected not in ('1', '2', '3'):
+        print("Please choose option '1', '2' or '3':")
+        menu_selected = input(menu_options)
+        print('')
+
+    if menu_selected == "1":
+        print("You choose to add a tool.")
+        print("Loading...")
+        time.sleep(1)
+        clear_console()
+        # add_a_tool()
+        
+    elif menu_selected == "2":
+        print("You choose to search for a tool.")
+        print("Loading...")
+        time.sleep(1)
+        clear_console()
+        # search_for_tool()
+
+    elif menu_selected == "3":
+        print("You choose to exit.")
+        print("Thank you for visiting!!")
+        time.sleep(1)
+        clear_console()
+        # exit()
+
+
+def main():
+    """
+    This is the main function, that will run the application
+    """
+    welcome()
+    explanation()
+    start_menu() 
+    main_menu()
     
 
-log_in_main()
+# main()
+
+
+
+def name_row_number():
+    """
+    With a for loop the row number of the name input is returned
+    """
+    print("To make sure the tool is added in the right place,\n")
+    print("We need your name again.")
+    print('')
+    user_lname = input('Please enter your last name again: \n').capitalize()
+    worksheet = SHEET.worksheet('members')
+    member_names = worksheet.col_values(2)
+    lname_row_number = 1
+    for x in login_names:
+        if x == user_lname:
+            print("Thank you!")
+            return lname_row_number
+        lname_row_number += 1
+
