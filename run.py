@@ -354,18 +354,21 @@ def add_tool_to_list(member_list):
     return member_list
 
 
-def update_member_row():
+def update_member_row(lname_row_number, member_list):
     """
     Updates the specific row pertaining to the logged in member
     """
-    members.update_cell(10, 10, 'test')
+    members.update(f"A{lname_row_number}:K{lname_row_number}", [member_list])
+    print("Adding tool to member list...")
+
 
 
 
 def add_tool():
     right_row = row_number()
     list_tools = list_member_tools(right_row)
-    add_tool_to_list(list_tools)
+    member_list = add_tool_to_list(list_tools)
+    update_member_row(right_row, member_list)
     # print(list_tools)
 
 
@@ -380,5 +383,4 @@ def main():
 
 
 # main()
-# add_tool()
-update_member_row()
+add_tool()
