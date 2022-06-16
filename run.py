@@ -258,7 +258,6 @@ def password_val(list_psswd):
         if input_psswd == list_psswd[2]:
             time.sleep(1)
             print("\nYour password is correct.")
-            print("Welkom back!\n")
             time.sleep(1)
             clear_console()
             break
