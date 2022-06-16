@@ -352,11 +352,25 @@ def list_member_tools(lname_row_number):
     With the row number as parameter the members information is returned
     as a list
     """
+
     worksheet = SHEET.worksheet('members')
     member_list = worksheet.row_values(lname_row_number)
     return member_list
 
 
+def add_tool_to_list(member_list):
+    """
+    Adds the given tool to the list returned from list_member_tools
+    """
+    print("What tool would you like to add?")
+    print("Please use the right name for the tool,")
+    print("As for people will look for the tool name.\n")
+    tool_name = input("Enter the tool name: \n")
+    list_added_tool = member_list.append(tool_name)
+    print(list_added_tool)
+
+
 right_row = row_number()
 list_tools = list_member_tools(right_row)
+# list_tools_added = add_tool_to_list(list_tools)
 print(list_tools)
