@@ -324,8 +324,7 @@ def row_number():
     print("We need your name again.")
     print('')
     user_lname = input('Please enter your last name again: \n').capitalize()
-    worksheet = SHEET.worksheet('members')
-    member_names = worksheet.col_values(2)
+    member_names = members.col_values(2)
     lname_row_number = 1
     for x in member_names:
         if x == user_lname:
@@ -339,8 +338,7 @@ def list_member_tools(lname_row_number):
     With the row number as parameter the members information is returned
     as a list of strings
     """
-    worksheet = SHEET.worksheet('members')
-    member_list = worksheet.row_values(lname_row_number)
+    member_list = members.row_values(lname_row_number)
     return member_list
 
 
@@ -353,7 +351,15 @@ def add_tool_to_list(member_list):
     print("your neighbours will look for the tool by name.\n")
     tool_name = input("Enter tool name: \n")
     member_list.append(tool_name)
-    print(member_list)
+    return member_list
+
+
+def update_member_row():
+    """
+    Updates the specific row pertaining to the logged in member
+    """
+    members.update_cell(10, 10, 'test')
+
 
 
 def add_tool():
@@ -373,4 +379,6 @@ def main():
     main_menu()
 
 
-main()
+# main()
+# add_tool()
+update_member_row()
