@@ -121,7 +121,15 @@ def registration():
         print('')
         time.sleep(1)
 
-        print(f"we now have you registered as: {update_fname} {update_lname}")
+        phone = input("Please enter you phone number:\n")
+        while phone.isdigit() is False:
+            print("Only digits are required, no letters or spaces.") 
+            print(f"you provided: {phone}")
+            print('')
+            phone = input("Please enter your phone number again:\n")
+        
+        print("we now have you registered as:")
+        print(f"{update_fname} {update_lname} {phone}")
         time.sleep(1)
         correct = input("Is that correct? 'y' for yes or 'n' for no:\n")
 
@@ -143,8 +151,8 @@ def registration():
             password = create_psswd()
             break
     # This will create a list out of the input for the worksheet
-    registr_input = f'{update_fname} ' + f'{update_lname} ' + f'{password}'
-    input_list = registr_input.split(" ")
+    reg = f'{update_fname} ' + f'{update_lname} ' + f'{phone}' + f'{password}'
+    input_list = reg.split(" ")
     update_member_worksheet(input_list)
 
 
