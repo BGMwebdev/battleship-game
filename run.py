@@ -362,15 +362,15 @@ def add_tool_to_list(member_list):
     """
     Adds the given tool to the list returned from list_member_tools
     """
-    print("What tool would you like to add?")
+    print("\nWhat tool would you like to add?")
     print("Please use the right name for the tool,")
-    print("As for people will look for the tool name.\n")
-    tool_name = input("Enter the tool name: \n")
-    list_added_tool = member_list.append(tool_name)
-    print(list_added_tool)
+    print("your neighbours will look for the tool by name.\n")
+    tool_name = input("Enter tool name: \n").split(" ")
+    list_added_tool = (member_list)
+    print(list_added_tool.append(tool_name))
 
 
 right_row = row_number()
 list_tools = list_member_tools(right_row)
-# list_tools_added = add_tool_to_list(list_tools)
-print(list_tools)
+add_tool_to_list(list_tools)
+# print(list_tools)
