@@ -365,9 +365,9 @@ def add_tool_to_list(member_list):
     print("\nWhat tool would you like to add?")
     print("Please use the right name for the tool,")
     print("your neighbours will look for the tool by name.\n")
-    tool_name = input("Enter tool name: \n").split(" ")
-    list_added_tool = (member_list)
-    print(list_added_tool.append(tool_name))
+    tool_name = input("Enter tool name: \n")
+    member_list.append(tool_name)
+    print(member_list)
 
 
 right_row = row_number()
