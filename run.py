@@ -245,7 +245,11 @@ def name_row_number():
         if x == user_lname:
             print("Your name has been found.")
             return lname_row_number
-        lname_row_number += 1
+            lname_row_number += 1
+            break
+        else:
+            print("Name not found. Try again!\n")
+            name_row_number()
 
 
 def list_psswd_check(lname_row_number):
