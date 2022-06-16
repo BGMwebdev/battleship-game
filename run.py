@@ -52,7 +52,7 @@ def explanation():
     print("when you are already registered, just log in!")
     print('')
     print("After that you can choose to search a tool.")
-    print("Or you can choose to add a tool.")
+    print("Or you can choose to add a tool, with a maximum of 8 tools.")
     print('')
     print("First things first...")
     print('')
@@ -244,8 +244,7 @@ def list_psswd_check(lname_row_number):
     """
     check password in list
     """
-    worksheet = SHEET.worksheet('members')
-    login_list = worksheet.row_values(lname_row_number)
+    login_list = members.row_values(lname_row_number)
     return login_list
     
 
@@ -358,10 +357,15 @@ def update_member_row(lname_row_number, member_list):
     """
     Updates the specific row pertaining to the logged in member
     """
-    members.update(f"A{lname_row_number}:K{lname_row_number}", [member_list])
+    members.update(f"A{lname_row_number}:L{lname_row_number}", [member_list])
     print("Adding tool to member list...")
+    
 
+def return_overview_tools(lname_row_number):
+    tools_list = members.row_values(lname_row_number)
+    print("Here is an overview of your tools:")
 
+    # print(tools_list[3],tools_list[8])
 
 
 def add_tool():
@@ -369,6 +373,7 @@ def add_tool():
     list_tools = list_member_tools(right_row)
     member_list = add_tool_to_list(list_tools)
     update_member_row(right_row, member_list)
+    return_overview_tools(right_row)
     # print(list_tools)
 
 
