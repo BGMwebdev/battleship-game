@@ -349,7 +349,8 @@ def row_number():
 
 def list_member_tools(lname_row_number):
     """
-    check password in list
+    With the row number as parameter the members information is returned
+    as a list
     """
     worksheet = SHEET.worksheet('members')
     member_list = worksheet.row_values(lname_row_number)
