@@ -331,7 +331,8 @@ def main():
 
 def row_number():
     """
-    With a for loop the row number of the name input is returned
+    With a for loop the row number is returned
+    that corresponds to the name input given
     """
     print("\nTo make sure the tool is added in the right place,")
     print("We need your name again.")
@@ -350,9 +351,8 @@ def row_number():
 def list_member_tools(lname_row_number):
     """
     With the row number as parameter the members information is returned
-    as a list
+    as a list of strings
     """
-
     worksheet = SHEET.worksheet('members')
     member_list = worksheet.row_values(lname_row_number)
     return member_list
