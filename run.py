@@ -104,8 +104,8 @@ def registration():
             print('')
             fname = input("Please enter your first name again:\n")
         
-        update_fname = name_correct(fname)
-        print(f"Hi {update_fname}!")
+        upd_fname = name_correct(fname)
+        print(f"Hi {upd_fname}!")
         print('')
         time.sleep(1)
 
@@ -116,12 +116,12 @@ def registration():
             print('')
             lname = input("Please enter your last name again:\n")
 
-        update_lname = name_correct(lname)
+        upd_lname = name_correct(lname)
         print("Registering...")
         print('')
         time.sleep(1)
 
-        phone = input("Please enter you phone number:\n")
+        phone = str(input("Please enter you phone number:\n"))
         while phone.isdigit() is False:
             print("Only digits are required, no letters or spaces.") 
             print(f"you provided: {phone}")
@@ -129,7 +129,7 @@ def registration():
             phone = input("Please enter your phone number again:\n")
         
         print("we now have you registered as:")
-        print(f"{update_fname} {update_lname} {phone}")
+        print(f"{upd_fname} {upd_lname} {phone}")
         time.sleep(1)
         correct = input("Is that correct? 'y' for yes or 'n' for no:\n")
 
@@ -151,7 +151,7 @@ def registration():
             password = create_psswd()
             break
     # This will create a list out of the input for the worksheet
-    reg = f'{update_fname} ' + f'{update_lname} ' + f'{phone}' + f'{password}'
+    reg = f'{upd_fname} ' + f'{upd_lname} ' + f'{phone}' + f'{password}'
     input_list = reg.split(" ")
     update_member_worksheet(input_list)
 
@@ -262,7 +262,7 @@ def password_val(list_psswd):
     """
     while True:
         input_psswd = input("\nPlease enter your unique password: \n")
-        if input_psswd == list_psswd[2]:
+        if input_psswd == list_psswd[3]:
             time.sleep(1)
             print("\nYour password is correct.")
             time.sleep(1)
@@ -369,20 +369,53 @@ def update_member_row(lname_row_number, member_list):
     print("Adding tool to member list...")
     
 
-def return_overview_tools(lname_row_number):
-    tools_list = members.row_values(lname_row_number)
-    print("Here is an overview of your tools:")
-
-    # print(tools_list[3],tools_list[8])
-
-
 def add_tool():
     right_row = row_number()
     list_tools = list_member_tools(right_row)
     member_list = add_tool_to_list(list_tools)
     update_member_row(right_row, member_list)
     return_overview_tools(right_row)
-    # print(list_tools)
+
+
+def return_overview_tools(lname_row_number):
+    tools_list = members.row_values(lname_row_number)
+    print("Here is an overview of your your information, including tools:")
+    return_value = " "
+    print(return_value.join(tools_list))
+    time.sleep(2)
+    print("Please select one of the options: ")
+    menu_options = "1) Main menu\n2) Exit\n"
+    menu_selected = input(menu_options)
+    print('')
+
+    # This will validate the answer and check if 1 or 2 is choosen
+    while menu_selected not in ('1', '2'):
+        print("Please choose option '1' or '2':")
+        menu_selected = input(menu_options)
+        print('')
+
+    if menu_selected == "1":
+        print("You choose main menu.")
+        print("Loading...")
+        time.sleep(1)
+        main_menu()
+                        
+    elif menu_selected == "2":
+        print("You choose to search for a tool.")
+        print("Loading...")
+        time.sleep(1)
+        clear_console()
+        # search_for_tool()
+
+    elif menu_selected == "3":
+        print("You choose to exit.")
+        print("Thank you for visiting!!")
+        time.sleep(1)
+        clear_console()
+        # exit()
+
+
+  
 
 
 def main():
