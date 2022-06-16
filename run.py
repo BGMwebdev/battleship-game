@@ -287,6 +287,7 @@ def main_menu():
     Presents three options
     to add a tool, to search for a tool or to exit
     """
+    clear_console()
     time.sleep(1)
     print("Welcome to the main menu!")
     print("Please select one of the options and press enter: ")
@@ -366,24 +367,16 @@ def update_member_row(lname_row_number, member_list):
     Updates the specific row pertaining to the logged in member
     """
     members.update(f"A{lname_row_number}:L{lname_row_number}", [member_list])
-    print("Adding tool to member list...")
+    print("Adding tool to member list...\n")
     
-
-def add_tool():
-    right_row = row_number()
-    list_tools = list_member_tools(right_row)
-    member_list = add_tool_to_list(list_tools)
-    update_member_row(right_row, member_list)
-    return_overview_tools(right_row)
-
 
 def return_overview_tools(lname_row_number):
     tools_list = members.row_values(lname_row_number)
-    print("Here is an overview of your your information, including tools:")
-    return_value = " "
-    print(return_value.join(tools_list))
+    print("Here is an overview of your tools:")
+    for i in tools_list[4:]:
+        print(i)
     time.sleep(2)
-    print("Please select one of the options: ")
+    print("\nWhen you're ready, please select one of the options: ")
     menu_options = "1) Main menu\n2) Exit\n"
     menu_selected = input(menu_options)
     print('')
@@ -408,7 +401,12 @@ def return_overview_tools(lname_row_number):
         # exit()
 
 
-  
+def add_tool():
+    right_row = row_number()
+    list_tools = list_member_tools(right_row)
+    member_list = add_tool_to_list(list_tools)
+    update_member_row(right_row, member_list)
+    return_overview_tools(right_row)
 
 
 def main():
@@ -421,5 +419,4 @@ def main():
     main_menu()
 
 
-# main()
-add_tool()
+main()
