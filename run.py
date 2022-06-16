@@ -329,21 +329,33 @@ def main():
 # main()
 
 
-
-def name_row_number():
+def row_number():
     """
     With a for loop the row number of the name input is returned
     """
-    print("To make sure the tool is added in the right place,\n")
+    print("\nTo make sure the tool is added in the right place,")
     print("We need your name again.")
     print('')
     user_lname = input('Please enter your last name again: \n').capitalize()
     worksheet = SHEET.worksheet('members')
     member_names = worksheet.col_values(2)
     lname_row_number = 1
-    for x in login_names:
+    for x in member_names:
         if x == user_lname:
             print("Thank you!")
             return lname_row_number
         lname_row_number += 1
 
+
+def list_member_tools(lname_row_number):
+    """
+    check password in list
+    """
+    worksheet = SHEET.worksheet('members')
+    member_list = worksheet.row_values(lname_row_number)
+    return member_list
+
+
+right_row = row_number()
+list_tools = list_member_tools(right_row)
+print(list_tools)
