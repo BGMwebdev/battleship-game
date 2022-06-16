@@ -399,15 +399,8 @@ def return_overview_tools(lname_row_number):
         print("Loading...")
         time.sleep(1)
         main_menu()
-                        
-    elif menu_selected == "2":
-        print("You choose to search for a tool.")
-        print("Loading...")
-        time.sleep(1)
-        clear_console()
-        # search_for_tool()
 
-    elif menu_selected == "3":
+    elif menu_selected == "2":
         print("You choose to exit.")
         print("Thank you for visiting!!")
         time.sleep(1)
