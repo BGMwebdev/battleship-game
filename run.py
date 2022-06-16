@@ -360,7 +360,7 @@ def list_member_tools(lname_row_number):
 
 def add_tool_to_list(member_list):
     """
-    Adds the given tool to the list returned from list_member_tools
+    Adds the given tool input to the list returned from list_member_tools
     """
     print("\nWhat tool would you like to add?")
     print("Please use the right name for the tool,")
