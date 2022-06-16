@@ -299,8 +299,8 @@ def main_menu():
         print("Loading...")
         time.sleep(1)
         clear_console()
-        # add_a_tool()
-        
+        add_tool()
+                
     elif menu_selected == "2":
         print("You choose to search for a tool.")
         print("Loading...")
@@ -314,19 +314,6 @@ def main_menu():
         time.sleep(1)
         clear_console()
         # exit()
-
-
-def main():
-    """
-    This is the main function, that will run the application
-    """
-    welcome()
-    explanation()
-    start_menu() 
-    main_menu()
-    
-
-# main()
 
 
 def row_number():
@@ -370,7 +357,21 @@ def add_tool_to_list(member_list):
     print(member_list)
 
 
-right_row = row_number()
-list_tools = list_member_tools(right_row)
-add_tool_to_list(list_tools)
-# print(list_tools)
+def add_tool():
+    right_row = row_number()
+    list_tools = list_member_tools(right_row)
+    add_tool_to_list(list_tools)
+    # print(list_tools)
+
+
+def main():
+    """
+    This is the main function, that will run the application
+    """
+    welcome()
+    explanation()
+    start_menu() 
+    main_menu()
+
+
+main()
