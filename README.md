@@ -1,21 +1,3 @@
-## Reminders
-
-* Your code must be placed in the `run.py` file
-* Your dependencies must be placed in the `requirements.txt` file
-* Do not edit any of the other files or your code may not deploy properly
-
-## Creating the Heroku app
-
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
-
-1. `heroku/python`
-2. `heroku/nodejs`
-
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
-
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
-
-Connect your GitHub repository and deploy as normal.
 
 -------------------------------------------------------------
 # Tools for borrow
@@ -82,13 +64,17 @@ Welcome to the Tools for borrow - system. This program aims to make life easier 
     #### Log in
     With this option chosen, the user will have to enter last name and unique password for authentication. This information is pulled from the google spreadsheet during registration first time visisting. After log in, the user will enter the main menu.
     #### Main menu
-    When entering the main menu, the user will be presented with 3 options. 
+    When entering the main menu, the user will be presented with 3 options. From here the user can interact with the main function, that is, to either add a tool, for other neighbours to find and borrow, to search for a tool that the user would like to borrow, or to exit the system entirely.
     1. add tool
     2. search tool
     3. exit
     #### Add tool
+    In this add function, the user will be asked again to enter their last name. This is to make sure the tools added, are added in the right place. Then the user can add the name of the tool. This will then be updated in the spreadsheet and the user will get an overview of the tools they have logged. 
     #### Search tool
+    In this section, the user will be asked to provide the name of the tool they are looking for. If the tool is found, the program will return a full name and number of the neighbour in possession of the tool. You will then be able to contact your neighbour, to ask for the tool.
+    if not found, the user will be asked to try again.
     #### Exit
+    Exit will take you out of the system entirely.
 
     </details>
 
@@ -115,3 +101,9 @@ Welcome to the Tools for borrow - system. This program aims to make life easier 
     
     
 <hr>
+
+future reference:
+- security, no adding tools to other people if you know their names. 
+- function for endless tool adding possibillity.
+- multiple search results if more people have the same tool.
+- take a tool out of the list
