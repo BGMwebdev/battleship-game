@@ -251,8 +251,28 @@ def name_row_number():
                 return lname_row_number 
                 list_psswd_check(lname_row_number)
             lname_row_number += 1
-        print("name not found! Please try again.")
-        continue            
+        print("The name you gave is not found!")
+        menu_options = "1) Try again\n2) Start menu\n"
+        menu_selected = input(menu_options)
+        print('')
+        # This will validate the answer and check if 1 or 2 is choosen
+        while menu_selected not in ('1', '2'):
+            print("Please choose option '1' or '2':")
+            menu_selected = input(menu_options)
+            print('')
+
+        if menu_selected == "1":
+            print("You choose try again.")
+            print("Loading...")
+            time.sleep(1)
+            continue
+
+        elif menu_selected == "2":
+            print("You choose start menu.")
+            print("Start menu loading...")
+            time.sleep(1)
+            clear_console()
+            start_menu()
 
 
 def list_psswd_check(lname_row_number):
@@ -334,17 +354,38 @@ def row_number():
     With a for loop the row number is returned
     that corresponds to the name input given
     """
-    print("\nTo make sure the tool is added in the right place,")
-    print("We need your name again.")
-    print('')
-    user_lname = input('Please enter your last name again: \n').capitalize()
-    member_names = members.col_values(2)
-    lname_row_number = 1
-    for x in member_names:
-        if x == user_lname:
-            print("Thank you!")
-            return lname_row_number
-        lname_row_number += 1
+    while True:
+        user_lname = input('Please enter your last name again: \n').capitalize()
+        member_names = members.col_values(2)
+        lname_row_number = 1
+        for x in member_names:
+            if x == user_lname:
+                print("Thank you")
+                return lname_row_number 
+                list_psswd_check(lname_row_number)
+            lname_row_number += 1
+        print("The name you gave was not found!")
+        menu_options = "1) Try again\n2) main menu\n"
+        menu_selected = input(menu_options)
+        print('')
+        # This will validate the answer and check if 1 or 2 is choosen
+        while menu_selected not in ('1', '2'):
+            print("Please choose option '1' or '2':")
+            menu_selected = input(menu_options)
+            print('')
+
+        if menu_selected == "1":
+            print("You choose try again.")
+            print("Loading...")
+            time.sleep(1)
+            continue
+
+        elif menu_selected == "2":
+            print("You choose main menu.")
+            print("Main menu loading...")
+            time.sleep(1)
+            clear_console()
+            main_menu()
 
 
 def list_member_tools(lname_row_number):
@@ -404,7 +445,6 @@ def return_overview_tools(lname_row_number):
         print("Thank you for visiting!!")
         time.sleep(1)
         clear_console()
-        # exit()
 
 
 def add_tool():
