@@ -22,6 +22,7 @@ Welcome to the Tools for borrow - system. This program aims to make life easier 
 4. [Technologies Used](#technologies-used)
     - [Languages](#languages)
     - [Frameworks and Tools](#frameworks-and-tools)
+    - [Libraries](#libraries)
 5. [Features](#features)
 6. [Testing](#validation)
     - [Python Validation](#Python-validation)
@@ -45,6 +46,8 @@ Welcome to the Tools for borrow - system. This program aims to make life easier 
     - Create an application with clear purpose.
     - Create an application that is intuitive and easy to navigate.
     - Create an application that will support the users need for tools.
+
+    [Back to Table Of Contents](#table-of-contents)
 <hr>
 
 2. ## User Experience
@@ -77,8 +80,6 @@ Welcome to the Tools for borrow - system. This program aims to make life easier 
     Exit will take you out of the system entirely.
 
     </details>
-
-    [Back to Table Of Contents](#table-of-contents)
 
     ### User Stories
     #### Resident user
@@ -116,6 +117,9 @@ Welcome to the Tools for borrow - system. This program aims to make life easier 
     ### Data Models
     I've chosen a more function oriented form of programming(FP), where I build function upon function in a very straightforward way to manipulate data in a google spreadsheet. Looking back, it would've been apropriate to use classes for example with a person/neighbour in the system, for they have a shared state, and shared actions. 
     
+    [Back to Table Of Contents](#table-of-contents)
+<hr>
+
 4. ## Technologies Used
 
     ### Languages
@@ -131,6 +135,18 @@ Welcome to the Tools for borrow - system. This program aims to make life easier 
     8. [Heroku Platform](https://dashboard.heroku.com/) is used to deploy this project into a live environment.
     9. [PEP8](http://pep8online.com/) is used to check if the written code was up to Python standard.
 
+    ### Libraries
+
+    #### Python Libraries
+    - os - is used to clear terminal when needed. I also find that it creates a better overview of the important information.
+    - time - is used to delay certain print statements in the terminal for smooth effect and better flow.
+
+    #### Third Party Libraries
+    - [gspread](https://docs.gspread.org/en/latest/) - JUSTIFICATION: I used gspread to manipulate data (get, update and store information) in my Google spreadsheet
+    - [google.oauth2.service_account](https://google-auth.readthedocs.io/en/master/) - JUSTIFICATION: This module is used for authentification that is needed to access the Google API and to connect my Service Account to the Credentials function. A creds.json file was added with all details the API needs.
+
+
+    [Back to Table Of Contents](#table-of-contents)
 <hr>
 
 future reference:
