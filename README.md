@@ -27,10 +27,10 @@ Welcome to the Tools for borrow - system. This program aims to make life easier 
 6. [Testing](#validation)
     - [Python Validation](#Python-validation)
     - [Testing user stories](#testing-user-stories)
-8. [Bugs](#Bugs)
-10. [Deployment](#deployment)
-11. [Credits](#credits)
-12. [Acknowledgements](#acknowledgements)
+7. [Bugs](#Bugs)
+8. [Deployment](#deployment)
+9. [Credits](#credits)
+10. [Acknowledgements](#acknowledgements)
 <hr>
 
 1. ## Project Goals
@@ -418,11 +418,30 @@ Welcome to the Tools for borrow - system. This program aims to make life easier 
     ![Feedback](docs/images/test_us_13.png)
     </details>
 
-<details>
+    <details>
 
+    [Back to Table Of Contents](#table-of-contents)
 <hr>
 
+7. ## Bugs
 
+| **Bug** | **Fix** |
+| ----------- | ----------- |
+| spaces in a name will later on create dificulty updating the spreadsheet | added a isalpha() function and a print statement to not use digits or spaces in the name |
+| while logging in, if the first time a wrong name is entered, the second time it throws the program | I dont't have a fix yet |
+| more than 8 tools added will throw an error , for columns are not used | I've added a statement for a max of 8 tools to be added. I've not yet fixed the error thrown | 
+| tool add func throws error after wrong name, like with log in | I don't have a fix yet, I doesn't seem to happen regularly |
+| Exit from main menu after search tool, results in question: what tool are you looking for? | no fix yet |
+
+8. ## Deployment
+
+
+
+9. ## Credits
+
+
+
+10. ## Acknowledgements
 
 
 
