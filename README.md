@@ -69,6 +69,25 @@ Welcome to the Tools for borrow - system. This program aims to make life easier 
     ### Target Audience
     - The target audience is everyone who lives in an appartment building or small community and wants to have a cheaper more co-created way of living, through the sharing of equipment / tools. 
 
+    ### User Manual
+
+    <details><summary>Click here to view instructions</summary>
+
+    #### start menu
+        - registration
+        - log in
+    #### Registration
+    #### Log in
+    #### Main menu
+        - add tool
+        - search tool
+        - exit
+    #### Add tool
+    #### Search tool
+    #### Exit
+
+    </details>
+
     ### User Stories
     #### Resident user
     1. As a first time user I want to have a clear idea of the purpose of the application. 
@@ -90,6 +109,5 @@ Welcome to the Tools for borrow - system. This program aims to make life easier 
     - For the first release I want users to be able to register / log in, search and/or add tools, and be able to read where to borrow them or get feedback when not available or present.
     - For future releases I would like for users to be able to delete tools from the list and ask for an overview of all present tools. 
     
-    ### User Manual
-    - 
+    
 <hr>
