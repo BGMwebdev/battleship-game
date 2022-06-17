@@ -97,10 +97,9 @@ def registration():
     """
     while 'n':
         time.sleep(1)
-        print("When entering your name, do not use digits or spaces")
         fname = input("Please enter your first name:\n")
         # This will make sure to have no digits in the name
-        while fname.isalpha() is False:
+        while all(x.isalpha() or x.isspace() for x in fname) is False:
             print("Do not use numbers or spaces!")
             print(f"Only letters are required, you provided: {fname}")
             print('')
@@ -111,10 +110,9 @@ def registration():
         print('')
         time.sleep(1)
 
-        print("When entering your name, do not use digits or spaces")
         lname = input("What is your last name?\n")
         # This will make sure to have no digits in the name
-        while lname.isalpha() is False:
+        while all(x.isalpha() or x.isspace() for x in lname) is False:
             print(f"Letters are required, you provided: {lname}")
             print('')
             lname = input("Please enter your last name again:\n")
