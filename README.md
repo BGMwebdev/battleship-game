@@ -199,7 +199,7 @@ Welcome to the Tools for borrow - system. This program aims to make life easier 
     ### Main menu
 
     - It's and easy to understand menu with clear navigation.
-    - It provides the user with 3 options on wehre to go next: add tool, search tool or exit
+    - It provides the user with 3 options on wehre to go next: add tool, search tool or exit.
     - User stories covered: 4, 7, 8, 11, 12
 
     <details>
@@ -207,6 +207,21 @@ Welcome to the Tools for borrow - system. This program aims to make life easier 
 
     ![Log in](docs/images/main_menu.png)
     </details>   
+
+    ### Add tool
+
+    - This will give the user the option to add a tool.
+    - After adding a tool, this will give the user an overview of the tools in his/her possesion.
+    - The user can add up to 8 tools, which will be stored in the google spreadsheet.
+    - After the overview there will be a option menu with further instruction, to go back or exit.
+    - User stories covered: 7, 8, 10, 12
+
+    <details>
+    <summary>Screenshot of Main menu</summary>
+
+    ![Log in](docs/images/main_menu.png)
+    </details>     
+
 
 <hr>
 
