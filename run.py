@@ -432,7 +432,7 @@ def search_for_tool():
 
     time.sleep(2)
     print("\nWhen you're ready, please select one of the options: ")
-    menu_options = "1) Search for another tool\n2) Back to main menu\n3) Exit\n"
+    menu_options = "1) Search another tool\n2) Back to main menu\n3) Exit\n"
     menu_selected = input(menu_options)
     print('')
 
