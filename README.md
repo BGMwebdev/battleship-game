@@ -150,6 +150,11 @@ Welcome to the Tools for borrow - system. This program aims to make life easier 
 
 5. ## Features
 
+    ### Input validation
+
+    - Input validation is done throughout the system where needed.
+    - Through a loop, most of the places with input will redirect to either ask again or provide options.
+
     ### Start menu
 
     - This provides the user with a welcome message.
@@ -181,7 +186,7 @@ Welcome to the Tools for borrow - system. This program aims to make life easier 
     ### Log In
 
     - Gives an existing user the opportunity to log in without registering again.
-    - Is done on the basis of the last name and the unique password givin
+    - Is done on the basis of the last name and the unique password givin.
     - Input info is searched in google spreadsheet for authentication.
     - User stories covered: 3, 8, 9, 11
 
@@ -190,6 +195,18 @@ Welcome to the Tools for borrow - system. This program aims to make life easier 
 
     ![Log in](docs/images/log_in.png)
     </details>
+
+    ### Main menu
+
+    - It's and easy to understand menu with clear navigation.
+    - It provides the user with 3 options on wehre to go next: add tool, search tool or exit
+    - User stories covered: 4, 7, 8, 11, 12
+
+    <details>
+    <summary>Screenshot of Main menu</summary>
+
+    ![Log in](docs/images/main_menu.png)
+    </details>   
 
 <hr>
 
