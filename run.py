@@ -97,9 +97,10 @@ def registration():
     """
     while 'n':
         time.sleep(1)
+        print("When entering your name, do not use digits or spaces")
         fname = input("Please enter your first name:\n")
-        # This will make sure to have no digits in the name
-        while all(x.isalpha() or x.isspace() for x in fname) is False:
+        # This will make sure to have only letters in the name
+        while fname.isalpha() is False:
             print("Do not use numbers or spaces!")
             print(f"Only letters are required, you provided: {fname}")
             print('')
@@ -110,10 +111,12 @@ def registration():
         print('')
         time.sleep(1)
 
+        print("When entering your name, do not use digits or spaces")
         lname = input("What is your last name?\n")
         # This will make sure to have no digits in the name
-        while all(x.isalpha() or x.isspace() for x in lname) is False:
-            print(f"Letters are required, you provided: {lname}")
+        while lname.isalpha() is False:
+            print("Only letters are required, do not use digits or spaces")
+            print(f"you provided: {lname}")
             print('')
             lname = input("Please enter your last name again:\n")
 
@@ -162,9 +165,8 @@ def name_correct(data):
     This will make sure spaces are considered in the name
     and the names are capitalized before going into the spreadsheet
     """
-    name_correct = (data).capitalize()
-    # replace(' ', '_')
-    return name_correct
+    name_corr = (data).capitalize()
+    return name_corr
 
 
 def update_member_worksheet(data):
