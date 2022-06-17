@@ -428,7 +428,27 @@ def search_for_tool():
             print(f"You can reach them on: {match_list[2]}")
             break
         else:
-            print("\nNo match found! Try again:")
+            print("\nNo match found!")
+            print("Would you like to do another search?")
+            menu_options = "1) yes\n2) no\n"
+            menu_selected = input(menu_options)
+            print('')
+
+            # This will validate the answer and check if 1 or 2 is choosen
+            while menu_selected not in ('1', '2'):
+                print("Please choose option '1' or '2':")
+                menu_selected = input(menu_options)
+                print('')
+
+            if menu_selected == "1":
+                print("You choose to search for another tool.")
+                print("Loading...")
+                time.sleep(1)
+                search_for_tool()
+
+            elif menu_selected == "2":
+                print("You choose no.")
+                break
 
     time.sleep(2)
     print("\nWhen you're ready, please select one of the options: ")
@@ -459,7 +479,6 @@ def search_for_tool():
         print("Thank you for visiting!!")
         time.sleep(1)
         clear_console()
-        # exit()
 
 
 def main():
