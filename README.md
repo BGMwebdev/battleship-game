@@ -329,40 +329,94 @@ Welcome to the Tools for borrow - system. This program aims to make life easier 
     | Search tool | provide tool name | user is expecting a response | Works as expected |
     
     <details>
-    <summary>Screenshot of Start menu feature</summary>
+    <summary>Screenshot of Search tool</summary>
 
     ![Search tool](docs/images/test_us_4_and_5.png)
     </details>
 
     6. As a user I want to get feedback if the tool is not available or present.
 
+    | **Feature**   | **Action**                    | **Expected Result**          | **Actual Result** |
+    | ------------- | ----------------------------- | ---------------------------- | ----------------- |
+    | Search tool | provide tool name | user is expecting a response | Works as expected |
+    
+    <details>
+    <summary>Screenshot of tool not found</summary>
 
+    ![Tool not found](docs/images/test_us_6.png)
+    </details>
 
     7. As a user I want to be able to add a tool to a list for others to use.
 
+    | **Feature**   | **Action**                    | **Expected Result**          | **Actual Result** |
+    | ------------- | ----------------------------- | ---------------------------- | ----------------- |
+    | Add tool | provide tool name | user is expecting tool to be added to list | Works as expected |
+    
+    <details>
+    <summary>Screenshot of adding tool</summary>
 
+    ![Add tool](docs/images/test_us_7.png)
+    </details>
 
     8. As a user I want nagivation to be clear and easy.
 
+    | **Feature**   | **Action**                    | **Expected Result**          | **Actual Result** |
+    | ------------- | ----------------------------- | ---------------------------- | ----------------- |
+    | Navigation | make choices and give input | user is expecting a clear and easy navigation | Works as expected |
+    
+    <details>
+    <summary>Screenshots of navigation</summary>
 
+    ![Navigation](docs/images/test_us_8_1.png)
+    ![Navigation](docs/images/test_us_8_2.png)
+    ![Navigation](docs/images/test_us_8_3.png)
+    </details>
 
     9. As a site owner I want registration and log in to be easy for the user.
 
-
+    For results and screenshots look at user stories testing 2 and 3
 
     10. As a site owner I want user names and other information to be saved to a Google Spreadsheet.
 
+    | **Feature**   | **Action**                    | **Expected Result**          | **Actual Result** |
+    | ------------- | ----------------------------- | ---------------------------- | ----------------- |
+    | registration and add tool | registration and tool name input | site owner expects data to be saved | Works as expected |
+    
+    <details>
+    <summary>Screenshot of spreadsheet data</summary>
 
+    ![Spreadsheet data](docs/images/test_us_10.png)
+    </details>
 
     11. As a site owner I want input to be validated where necessary.
 
+    | **Feature**   | **Action**                    | **Expected Result**          | **Actual Result** |
+    | ------------- | ----------------------------- | ---------------------------- | ----------------- |
+    | Validation | give input | user is expecting validation | Works as expected |
+    
+    <details>
+    <summary>Screenshots of validation</summary>
 
+    ![Validation](docs/images/test_us_11_1.png)
+    ![Validation](docs/images/test_us_11_2.png)
+    ![Validation](docs/images/test_us_11_3.png)
+    </details>
 
     12. As a site owner I want the user to be able to add and find a tool.
 
-
+    For results and screenshots look at user stories testing 4, 5, 6 and 7 
 
     13. As a site owner I want the user to get feedback if a tool is not available or present.
+
+    | **Feature**   | **Action**                    | **Expected Result**          | **Actual Result** |
+    | ------------- | ----------------------------- | ---------------------------- | ----------------- |
+    | search tool | tool name input | user expects feedback | Works as expected |
+    
+    <details>
+    <summary>Screenshot of feedback</summary>
+
+    ![Feedback](docs/images/test_us_13.png)
+    </details>
 
 <details>
 
