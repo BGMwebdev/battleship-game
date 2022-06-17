@@ -7,7 +7,7 @@
 Welcome to the Tools for borrow - system. This program aims to make life easier and cheaper for residents of an appartment building. Through registration the residents are provided with a system that will give insight in, and allow them to, borrow eachothers tools. 
 <hr>
 
-## Table of Content
+## Table of Contents
 1. [Project Goals](#project-goals)
     - [User Goals](#user-goals)
     - [Site Owner Goals](#site-owner-goals)
@@ -78,6 +78,8 @@ Welcome to the Tools for borrow - system. This program aims to make life easier 
 
     </details>
 
+    [Back to Table Of Contents](#table-of-contents)
+
     ### User Stories
     #### Resident user
     1. As a first time user I want to have a clear idea of the purpose of the application. 
@@ -97,9 +99,15 @@ Welcome to the Tools for borrow - system. This program aims to make life easier 
 
     ### Scope
     - For the first release I want users to be able to register / log in, search and/or add tools, and be able to read where to borrow them or get feedback when not available or present.
-    - For future releases I would like for users to be able to delete tools from the list and ask for an overview of all present tools. 
+    - For future releases I would like for users to be able to delete tools from the list, add unlimited tools, have multiple search result when more people are in possesion of the tool and add some more security.  
     
-    
+    [Back to Table Of Contents](#table-of-contents)
+<hr>   
+
+
+
+
+
 <hr>
 
 future reference:
