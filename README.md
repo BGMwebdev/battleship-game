@@ -160,10 +160,23 @@ Welcome to the Tools for borrow - system. This program aims to make life easier 
     <details>
     <summary>Screenshot of Start menu</summary>
 
-    ![Sart menu](docs/)
+    ![Sart menu](docs/images/start_menu.png)
     </details>
 
+    ### Registration
 
+    - New users can register to the system.
+    - One by one, a couple of questions are asked: names and phone number, to be saved in a spreadsheet.
+    - After check if input is correct, unique password is asked to be created.
+    - After this, the user will go directly to log in.
+    - User stories covered: 2, 3, 9, 10, 11
+
+      <details>
+    <summary>Screenshots of input names and number and a screenshot of unique password</summary>
+
+    ![Sart menu](docs/images/reg_fname_lname_phone.png)
+    ![Sart menu](docs/images/unique_psswd.png)
+    </details>
 
 <hr>
 
