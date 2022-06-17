@@ -155,7 +155,7 @@ Welcome to the Tools for borrow - system. This program aims to make life easier 
     - This provides the user with a welcome message.
     - It gives a short introduction to what to expect.
     - It provides the user with two options, to register(as a first time user) or to log in.
-    - User stories covered: 1, 2, 3
+    - User stories covered: 1, 2, 3, 8
 
     <details>
     <summary>Screenshot of Start menu</summary>
@@ -169,13 +169,26 @@ Welcome to the Tools for borrow - system. This program aims to make life easier 
     - One by one, a couple of questions are asked: names and phone number, to be saved in a spreadsheet.
     - After check if input is correct, unique password is asked to be created.
     - After this, the user will go directly to log in.
-    - User stories covered: 2, 3, 9, 10, 11
+    - User stories covered: 2, 3, 9, 10, 11, 8
 
-      <details>
+    <details>
     <summary>Screenshots of input names and number and a screenshot of unique password</summary>
 
-    ![Sart menu](docs/images/reg_fname_lname_phone.png)
-    ![Sart menu](docs/images/unique_psswd.png)
+    ![Registration input](docs/images/reg_fname_lname_phone.png)
+    ![Unique password](docs/images/unique_psswd.png)
+    </details>
+
+    ### Log In
+
+    - Gives an existing user the opportunity to log in without registering again.
+    - Is done on the basis of the last name and the unique password givin
+    - Input info is searched in google spreadsheet for authentication.
+    - User stories covered: 3, 8, 9, 11
+
+    <details>
+    <summary>Screenshot of Log in</summary>
+
+    ![Log in](docs/images/log_in.png)
     </details>
 
 <hr>
@@ -188,6 +201,7 @@ Welcome to the Tools for borrow - system. This program aims to make life easier 
 
 future reference:
 - security, no adding tools to other people if you know their names. 
+- Forgot password option.
 - function for endless tool adding possibillity.
 - multiple search results if more people have the same tool.
-- take a tool out of the list
+- take a tool out of the list.
