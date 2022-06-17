@@ -126,14 +126,14 @@ Welcome to the Tools for borrow - system. This program aims to make life easier 
     - [Python](https://www.python.org/) programming language is the main language used for this system.
 
     ### Frameworks and Tools
-    1. [Gitpod](https://gitpod.io/) - is used for version control to push the code to GitHub.
-    2. [GitHub](https://github.com/) - is where I stored my code in a remote repository. 
-    4. [Lucidchart](https://www.lucidchart.com/) - is used to create the flowchart.
-    5. [Google Sheets](https://www.google.co.uk/sheets/about/) - is used to store data outside of this system.  
-    6. [Google Cloud Platform](https://cloud.google.com/cloud-console/) - is used for authentications and permissions to the google services, google auth and sheets etc.
-    7. [Google Sheets](https://www.google.co.uk/sheets/about/) is used to store user data like names, passwords, phone numbers and tools.
-    8. [Heroku Platform](https://dashboard.heroku.com/) is used to deploy this project into a live environment.
-    9. [PEP8](http://pep8online.com/) is used to check if the written code was up to Python standard.
+    - [Gitpod](https://gitpod.io/) - is used for version control to push the code to GitHub.
+    - [GitHub](https://github.com/) - is where I stored my code in a remote repository. 
+    - [Lucidchart](https://www.lucidchart.com/) - is used to create the flowchart.
+    - [Google Sheets](https://www.google.co.uk/sheets/about/) - is used to store data outside of this system.  
+    - [Google Cloud Platform](https://cloud.google.com/cloud-console/) - is used for authentications and permissions to the google services, google auth and sheets etc.
+    - [Google Sheets](https://www.google.co.uk/sheets/about/) is used to store user data like names, passwords, phone numbers and tools.
+    - [Heroku Platform](https://dashboard.heroku.com/) is used to deploy this project into a live environment.
+    - [PEP8](http://pep8online.com/) is used to check if the written code was up to Python standard.
 
     ### Libraries
 
@@ -145,9 +145,33 @@ Welcome to the Tools for borrow - system. This program aims to make life easier 
     - [gspread](https://docs.gspread.org/en/latest/) - JUSTIFICATION: I used gspread to manipulate data (get, update and store information) in my Google spreadsheet
     - [google.oauth2.service_account](https://google-auth.readthedocs.io/en/master/) - JUSTIFICATION: This module is used for authentification that is needed to access the Google API and to connect my Service Account to the Credentials function. A creds.json file was added with all details the API needs.
 
-
     [Back to Table Of Contents](#table-of-contents)
 <hr>
+
+5. ## Features
+
+    ### Start menu
+
+    - This provides the user with a welcome message.
+    - It gives a short introduction to what to expect.
+    - It provides the user with two options, to register(as a first time user) or to log in.
+    - User stories covered: 1, 2, 3
+
+    <details>
+    <summary>Screenshot of Start menu</summary>
+
+    ![Sart menu](docs/)
+    </details>
+
+
+
+<hr>
+
+
+
+
+
+
 
 future reference:
 - security, no adding tools to other people if you know their names. 
