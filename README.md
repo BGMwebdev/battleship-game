@@ -74,14 +74,18 @@ Welcome to the Tools for borrow - system. This program aims to make life easier 
     <details><summary>Click here to view instructions</summary>
 
     #### start menu
-        - registration
-        - log in
+    After the welcome message in the start menu, the user is presented with two option. The first option will take the user into registration. The second option will take the user straight to log in. The user is aksed to choose either '1' or '2'.
+    1. registration
+    2. log in
     #### Registration
+    With this option chosen, the user will enter a series of questions. The question are, first name, last name, phone number and unique password. Details on what to fill in will be stated in the moment. This input will all be registrated in a google sppreadsheet. 
     #### Log in
+    With this option chosen, the user will have to enter last name and unique password for authentication. This information is pulled from the google spreadsheet during registration first time visisting. After log in, the user will enter the main menu.
     #### Main menu
-        - add tool
-        - search tool
-        - exit
+    When entering the main menu, the user will be presented with 3 options. 
+    1. add tool
+    2. search tool
+    3. exit
     #### Add tool
     #### Search tool
     #### Exit
