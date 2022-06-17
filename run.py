@@ -241,18 +241,18 @@ def name_row_number():
     """
     With a for loop the row number of the name input is returned
     """
-    user_lname = input('Enter your last name: \n').capitalize()
-    login_names = members.col_values(2)
-    lname_row_number = 1
-    for x in login_names:
-        if x == user_lname:
-            print("Your name has been found.")
-            return lname_row_number
-            list_psswd_check(lname_row_number)
-        lname_row_number += 1
-    if user_lname not in login_names:
-        print("Last name not found. Try again!")
-        name_row_number()
+    while True:
+        user_lname = input('Enter your last name: \n').capitalize()
+        login_names = members.col_values(2)
+        lname_row_number = 1
+        for x in login_names:
+            if x == user_lname:
+                print("Your name has been found.")
+                return lname_row_number 
+                list_psswd_check(lname_row_number)
+            lname_row_number += 1
+        print("name not found! Please try again.")
+        continue            
 
 
 def list_psswd_check(lname_row_number):
