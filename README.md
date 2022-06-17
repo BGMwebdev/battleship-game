@@ -155,6 +155,13 @@ Welcome to the Tools for borrow - system. This program aims to make life easier 
     - Input validation is done throughout the system where needed.
     - Through a loop, most of the places with input will redirect to either ask again or provide options.
 
+    <details>
+    <summary>Screenshot examples of asking again when input not valid</summary>
+
+    ![Ask again example](docs/images/ask_again.png)
+    ![Ask again example](docs/images/ask_again2.png)
+    </details>
+
     ### Start menu
 
     - This provides the user with a welcome message.
@@ -244,6 +251,20 @@ Welcome to the Tools for borrow - system. This program aims to make life easier 
     - Will take the user out of the system. 
     - For easy navigation of the system.
     - User stories: 8  
+
+    [Back to Table Of Contents](#table-of-contents)
+<hr>
+
+6. ## Testing
+
+    ### Python Validation
+
+    [PEP8 Validation](http://pep8online.com/) was used to check the code for PEP8 requirements. All the code was pasted into the engine. Al the code passes with no errors and no warnings to show.
+
+
+    ### Testing user stories
+
+
 
 <hr>
 
