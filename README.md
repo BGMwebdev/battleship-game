@@ -430,7 +430,7 @@ Welcome to the Tools for borrow - system. This program aims to make life easier 
     | spaces in a name will later on create dificulty updating the spreadsheet | added a isalpha() function and a print statement to not use digits or spaces in the name |
     | while logging in, if the first time a wrong name is entered, the second time it throws the program | I changed the loop with a menu if name not found and continue if chosen to try again, when name not found. |
     | more than 8 tools added will throw an error , for columns are not used | I've added a statement for a max of 8 tools to be added. I've not yet fixed the error thrown | 
-    | tool add func throws error after wrong name, like with log in | I don't have a fix yet, It doesn't seem to happen regularly |
+    | tool add func throws error after wrong name, like with log in | I created a while loop with a choice menu and if try again is chosen, continue |
     | Exit from main menu after search tool, results in question: what tool are you looking for? | no fix yet |
 
     [Back to Table Of Contents](#table-of-contents)
