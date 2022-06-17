@@ -13,9 +13,9 @@ Welcome to the Tools for borrow - system. This program aims to make life easier 
     - [Site Owner Goals](#site-owner-goals)
 2. [User Experience](#user-experience)
     - [Target Audience](#target-audience)
+    - [User Manual](#user-manual)    
     - [User Stories](#user-stories)
     - [Scope](#scope)
-    - [User Manual](#user-manual)
 3. [Technical Design](#technical-design)
     - [Flowchart](#flowchart)
     - [Data Models](#data-models)   
@@ -104,8 +104,18 @@ Welcome to the Tools for borrow - system. This program aims to make life easier 
     [Back to Table Of Contents](#table-of-contents)
 <hr>   
 
+3. ## Technical Design
+
+    ### Flowchart
+    below you will find a flowchart which will show the flow and logic of this system. This chart was created with [Lucidchart](https://www.lucidchart.com/)
+
+    <details><summary>Flowchart</summary>
+    <img src="docs/images/flow_chart.png"></details>
 
 
+    ### Data Models
+    I've chosen a more function oriented form of programming(FP), where I build function upon function in a very straightforward way to manipulate data in a google spreadsheet. Looking back, it would've been apropriate to use classes for example with a person/neighbour in the system, for they have a shared state, and shared actions. 
+    
 
 
 <hr>
