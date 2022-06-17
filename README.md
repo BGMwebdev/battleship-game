@@ -116,7 +116,20 @@ Welcome to the Tools for borrow - system. This program aims to make life easier 
     ### Data Models
     I've chosen a more function oriented form of programming(FP), where I build function upon function in a very straightforward way to manipulate data in a google spreadsheet. Looking back, it would've been apropriate to use classes for example with a person/neighbour in the system, for they have a shared state, and shared actions. 
     
+4. ## Technologies Used
 
+    ### Languages
+    - [Python](https://www.python.org/) programming language is the main language used for this system.
+
+    ### Frameworks and Tools
+    1. [Gitpod](https://gitpod.io/) - is used for version control to push the code to GitHub.
+    2. [GitHub](https://github.com/) - is where I stored my code in a remote repository. 
+    4. [Lucidchart](https://www.lucidchart.com/) - is used to create the flowchart.
+    5. [Google Sheets](https://www.google.co.uk/sheets/about/) - is used to store data outside of this system.  
+    6. [Google Cloud Platform](https://cloud.google.com/cloud-console/) - is used for authentications and permissions to the google services, google auth and sheets etc.
+    7. [Google Sheets](https://www.google.co.uk/sheets/about/) is used to store user data like names, passwords, phone numbers and tools.
+    8. [Heroku Platform](https://dashboard.heroku.com/) is used to deploy this project into a live environment.
+    9. [PEP8](http://pep8online.com/) is used to check if the written code was up to Python standard.
 
 <hr>
 
