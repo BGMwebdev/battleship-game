@@ -52,7 +52,7 @@ def explanation():
     print("when you are already registered, just log in!")
     print('')
     print("After that you can choose to search a tool.")
-    print("Or you can choose to add a tool, with a maximum of 8 tools.")
+    print("Or you can choose to add a tool.")
     print('')
     print("First things first...")
     print('')
@@ -405,15 +405,21 @@ def add_tool_to_list(member_list):
     print("Please use the right name for the tool,")
     print("your neighbours will look for the tool by name.\n")
     tool_name = input("Enter tool name: \n")
-    member_list.append(tool_name)
-    return member_list
+    if len(member_list) <= 11:
+        member_list.append(tool_name)
+        return member_list
+    else:
+        print("Maximum number of tools in list reached!\n")
+        print("You're being redirected to the main menu...")
+        time.sleep(2)
+        main_menu()
 
 
 def update_member_row(lname_row_number, member_list):
     """
     Updates the specific row pertaining to the logged in member
     """
-    members.update(f"A{lname_row_number}:L{lname_row_number}", [member_list])
+    members.update(f"A{lname_row_number}:z{lname_row_number}", [member_list])
     print("Adding tool to member list...\n")
     
 
