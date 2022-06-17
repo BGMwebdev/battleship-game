@@ -425,20 +425,50 @@ Welcome to the Tools for borrow - system. This program aims to make life easier 
 
 7. ## Bugs
 
-| **Bug** | **Fix** |
-| ----------- | ----------- |
-| spaces in a name will later on create dificulty updating the spreadsheet | added a isalpha() function and a print statement to not use digits or spaces in the name |
-| while logging in, if the first time a wrong name is entered, the second time it throws the program | I dont't have a fix yet |
-| more than 8 tools added will throw an error , for columns are not used | I've added a statement for a max of 8 tools to be added. I've not yet fixed the error thrown | 
-| tool add func throws error after wrong name, like with log in | I don't have a fix yet, I doesn't seem to happen regularly |
-| Exit from main menu after search tool, results in question: what tool are you looking for? | no fix yet |
+    | **Bug** | **Fix** |
+    | ----------- | ----------- |
+    | spaces in a name will later on create dificulty updating the spreadsheet | added a isalpha() function and a print statement to not use digits or spaces in the name |
+    | while logging in, if the first time a wrong name is entered, the second time it throws the program | I dont't have a fix yet |
+    | more than 8 tools added will throw an error , for columns are not used | I've added a statement for a max of 8 tools to be added. I've not yet fixed the error thrown | 
+    | tool add func throws error after wrong name, like with log in | I don't have a fix yet, I doesn't seem to happen regularly |
+    | Exit from main menu after search tool, results in question: what tool are you looking for? | no fix yet |
+
+    [Back to Table Of Contents](#table-of-contents)
+<hr>
 
 8. ## Deployment
 
+    ### Heroku
+    This application has been deployed in Heroku by following these steps:
 
+    1. Create or log in to your account at heroku.com
+    2. Create a new app, add a unique app name (this project is named "ci-pp3-connect4") and choose your region
+    3. Click on create app
+    4. Go to "Settings"
+    5. Under Config Vars store any sensitive data you saved in .json file. Name 'Key' field, copy the .json file and paste it to 'Value' field. Also add a key 'PORT' and value '8000'.
+    6. Add required buildpacks (further dependencies). For this project, I set up 'Python' and 'node.js' in that order.
+    7. Go to "Deploy" and select "GitHub" in "Deployment method"
+    8. To link up our Heroku app to our Github repository code enter your repository name, click 'Search' and then 'Connect' when it shows below
+    9.  Choose the branch you want to buid your app from
+    10. If prefered, click on "Enable Automatic Deploys", which keeps the app up to date with your GitHub repository
+    11. Wait for the app to build. Once ready you will see the “App was successfully deployed” message and a 'View' button to take you to your deployed link.
+
+    [Back to Table Of Contents](#table-of-contents)
+<hr>
 
 9. ## Credits
 
+    ### Code
+
+    - Code Institute - for git template IDE and "Love Sandwiches - Essentials Project" which inspired me to do a more data oriented project and helped me connect the Google Spreadsheet.
+    - For the use of os: [clear console](https://appdividend.com/2022/06/03/how-to-clear-console-in-python/#:~:text=For%20the%20Linux%20system%2C%20to,('cls')%20command).
+    - For the use of letter input control I went to stackoverflow: [only letters](https://stackoverflow.com/questions/18667410/how-can-i-check-if-a-string-only-contains-letters-in-python).
+    - For password validation I looked on Geeks for Geeks: [password validation](https://www.geeksforgeeks.org/python-program-check-validity-password/) and [password validation](https://www.geeksforgeeks.org/password-validation-in-python/).
+    - For append method in google spreadsheet I looked at [Learn Google Spreadsheets](https://www.youtube.com/watch?v=OZDGVTmQ45Q&t=226s).
+    - I used [gspread documentation](https://docs.gspread.org/en/latest/genindex.html) for a better understanding and use of google sheets.
+    - I used [Google sheet for developer](https://developers.google.com/sheets/api/reference/rest/v4/spreadsheets.values/update) for a better understanding and use of google sheets.
+    - I used [Aleksandra](https://github.com/aleksandracodes/CI_PP3_Connect4/blob/main/README.md) her github repository on pp3 as a reference to the scope and the layout of the readme file. 
+    - I used [Danny](https://github.com/aleksandracodes/CI_PP3_Connect4/blob/main/README.md) his github repository on pp3 as a reference to the scope and the layout of the readme file. 
 
 
 10. ## Acknowledgements
