@@ -88,7 +88,7 @@ def start_menu():
         time.sleep(1)
         clear_console()
         log_in_main()
-        
+
 
 def registration():
     """
@@ -209,7 +209,7 @@ def create_psswd():
             time.sleep(2)
             return password
             break
-   
+
 
 def password_check(password):
     """
@@ -281,7 +281,7 @@ def list_psswd_check(lname_row_number):
     """
     login_list = members.row_values(lname_row_number)
     return login_list
-    
+
 
 def password_val(list_psswd):
     """
@@ -421,7 +421,7 @@ def update_member_row(lname_row_number, member_list):
     """
     members.update(f"A{lname_row_number}:z{lname_row_number}", [member_list])
     print("Adding tool to member list...\n")
-    
+
 
 def return_overview_tools(lname_row_number):
     tools_list = members.row_values(lname_row_number)
@@ -538,4 +538,3 @@ def main():
 
 
 main()
-
