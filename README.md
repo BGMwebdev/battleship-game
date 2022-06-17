@@ -291,12 +291,11 @@ Welcome to the Tools for borrow - system. This program aims to make life easier 
     | Unique password | input unique password | Confirmation. User is taken to log in | Works as expected |
 
     <details>
-    <summary>Screenshot of Start menu feature</summary>
+    <summary>Screenshot of registration and unique password</summary>
 
     ![Registration](docs/images/test_us_2.png)
     ![Registration](docs/images/test_us_2_1.png)
     </details>
-
 
     3. As a user I want to be able to log in.
 
@@ -305,13 +304,35 @@ Welcome to the Tools for borrow - system. This program aims to make life easier 
     | log in | Select option 2 | User is presented with questions | Works as expected |
     | Unique password | provide unique password | Confirmation. User is taken to log in | Works as expected |
 
+    <details>
+    <summary>Screenshot of Log in</summary>
+
+    ![Registration](docs/images/test_us_3.png)
+    </details>
+
     4. As a user I want to be able to search for a tool.
 
+    | **Feature**   | **Action**                    | **Expected Result**          | **Actual Result** |
+    | ------------- | ----------------------------- | ---------------------------- | ----------------- |
+    | Search tool | provide tool name | user is expecting a response | Works as expected |
+    
+    <details>
+    <summary>Screenshot of Search tool</summary>
 
+    ![Search tool](docs/images/test_us_4_and_5.png)
+    </details>
 
     5. I want to be able to see where I can borrow the tool.
 
+    | **Feature**   | **Action**                    | **Expected Result**          | **Actual Result** |
+    | ------------- | ----------------------------- | ---------------------------- | ----------------- |
+    | Search tool | provide tool name | user is expecting a response | Works as expected |
+    
+    <details>
+    <summary>Screenshot of Start menu feature</summary>
 
+    ![Search tool](docs/images/test_us_4_and_5.png)
+    </details>
 
     6. As a user I want to get feedback if the tool is not available or present.
 
@@ -322,7 +343,6 @@ Welcome to the Tools for borrow - system. This program aims to make life easier 
 
 
     8. As a user I want nagivation to be clear and easy.
-
 
 
 
