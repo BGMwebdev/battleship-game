@@ -72,7 +72,7 @@ Welcome to the Tools for borrow - system. This program aims to make life easier 
     In this add function, the user will be asked again to enter their last name. This is to make sure the tools added, are added in the right place. Then the user can add the name of the tool. This will then be updated in the spreadsheet and the user will get an overview of the tools they have logged. 
     #### Search tool
     In this section, the user will be asked to provide the name of the tool they are looking for. If the tool is found, the program will return a full name and number of the neighbour in possession of the tool. You will then be able to contact your neighbour, to ask for the tool.
-    if not found, the user will be asked to try again.
+    if not found, the user will be asked if they want to do another search or not. If chosen not, they will go back to the menu.
     #### Exit
     Exit will take you out of the system entirely.
 
