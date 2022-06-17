@@ -163,7 +163,7 @@ Welcome to the Tools for borrow - system. This program aims to make life easier 
     - User stories covered: 1, 2, 3, 8
 
     <details>
-    <summary>Screenshot of Start menu</summary>
+    <summary>Screenshot of Start menu feature</summary>
 
     ![Sart menu](docs/images/start_menu.png)
     </details>
@@ -177,7 +177,7 @@ Welcome to the Tools for borrow - system. This program aims to make life easier 
     - User stories covered: 2, 3, 9, 10, 11, 8
 
     <details>
-    <summary>Screenshots of input names and number and a screenshot of unique password</summary>
+    <summary>Screenshots of input names and number and a screenshot of unique password features</summary>
 
     ![Registration input](docs/images/reg_fname_lname_phone.png)
     ![Unique password](docs/images/unique_psswd.png)
@@ -191,7 +191,7 @@ Welcome to the Tools for borrow - system. This program aims to make life easier 
     - User stories covered: 3, 8, 9, 11
 
     <details>
-    <summary>Screenshot of Log in</summary>
+    <summary>Screenshot of Log in feature</summary>
 
     ![Log in](docs/images/log_in.png)
     </details>
@@ -203,7 +203,7 @@ Welcome to the Tools for borrow - system. This program aims to make life easier 
     - User stories covered: 4, 7, 8, 11, 12
 
     <details>
-    <summary>Screenshot of Main menu</summary>
+    <summary>Screenshot of Main menu feature</summary>
 
     ![Log in](docs/images/main_menu.png)
     </details>   
@@ -217,11 +217,33 @@ Welcome to the Tools for borrow - system. This program aims to make life easier 
     - User stories covered: 7, 8, 10, 12
 
     <details>
-    <summary>Screenshot of Main menu</summary>
+    <summary>Screenshots of the add tool feature</summary>
 
-    ![Log in](docs/images/main_menu.png)
+    ![Add tool](docs/images/add_tool.png)
+    ![After add tool](docs/images/after_add_tool.png)
     </details>     
 
+    ### Search tool
+
+    - This will give the user the option to search for the tool he needs.
+    - This is linked to google spreadsheet and will loop through all the data provided.
+    - If not found, it will ask if another search is wanted.
+    - If found, the user is provided with the name and number of the neighbour in possesion of the tool.
+    - When ready, the user is provided with an option menu for easy navigation.
+    - User stories covered: 4, 5, 6, 8, 12, 13
+
+    <details>
+    <summary>Screenshots of the search tool feature</summary>
+
+    ![Search tool](docs/images/search_tool.png)
+    ![After search tool](docs/images/after_search_tool.png)
+    </details>   
+
+    ### Exit
+
+    - Will take the user out of the system. 
+    - For easy navigation of the system.
+    - User stories: 8  
 
 <hr>
 
