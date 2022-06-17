@@ -261,10 +261,15 @@ Welcome to the Tools for borrow - system. This program aims to make life easier 
 
     [PEP8 Validation](http://pep8online.com/) was used to check the code for PEP8 requirements. All the code was pasted into the engine. Al the code passes with no errors and no warnings to show.
 
+    <details>
+    <summary>Screenshot of pep8 test result</summary>
+
+    ![Pep8 test result](docs/images/pep8_check.png)
+    </details> 
 
     ### Testing user stories
 
-
+    
 
 <hr>
 
