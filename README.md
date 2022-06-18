@@ -2,9 +2,16 @@
 -------------------------------------------------------------
 # Tools for borrow
 
+(Developer: Bastiaan Milo)
+
+![Start screen](docs/images/start_img.png)
+
 ## Introduction
 <hr>
 Welcome to the Tools for borrow - system. This program aims to make life easier and cheaper for residents of an appartment building. Through registration the residents are provided with a system that will give insight in, and allow them to, borrow eachothers tools. 
+This way the residents don't have to buy all new tools, and the tools in circulation get to be used more often instead of lying somewhere unused. This project was written mainly in Python language for educational purpose with Code Institue. For the purpose of this project I used Google spreadsheets to collect, manipulate and save data.
+
+[Here is is a live link to the project]()
 <hr>
 
 ## Table of Contents
@@ -31,6 +38,8 @@ Welcome to the Tools for borrow - system. This program aims to make life easier 
 8. [Deployment](#deployment)
 9. [Credits](#credits)
 10. [Acknowledgements](#acknowledgements)
+11. [Features for the future]()
+
 <hr>
 
 1. ## Project Goals
@@ -462,7 +471,8 @@ Welcome to the Tools for borrow - system. This program aims to make life easier 
 
     ### Code
 
-    - Code Institute - for git template IDE and "Love Sandwiches - Essentials Project" which inspired me to do a more data oriented project and helped me connect the Google Spreadsheet.
+    - Code Institute - for the git template IDE and heroku deployment instructions.
+    - Code Institute for the "Love Sandwiches - Essentials Project" which inspired me to do a more data oriented project and helped me connect the Google Spreadsheet.
     - For the use of os: [clear console](https://appdividend.com/2022/06/03/how-to-clear-console-in-python/#:~:text=For%20the%20Linux%20system%2C%20to,('cls')%20command).
     - For the use of letter input control I went to stackoverflow: [only letters](https://stackoverflow.com/questions/18667410/how-can-i-check-if-a-string-only-contains-letters-in-python).
     - For password validation I looked on Geeks for Geeks: [password validation](https://www.geeksforgeeks.org/python-program-check-validity-password/) and [password validation](https://www.geeksforgeeks.org/password-validation-in-python/).
@@ -472,16 +482,26 @@ Welcome to the Tools for borrow - system. This program aims to make life easier 
     - I used [Aleksandra](https://github.com/aleksandracodes/CI_PP3_Connect4/blob/main/README.md) her github repository on pp3 as a reference to the scope and the layout of the readme file. 
     - I used [Danny](https://github.com/aleksandracodes/CI_PP3_Connect4/blob/main/README.md) his github repository on pp3 as a reference to the scope and the layout of the readme file. 
 
+    [Back to Table Of Contents](#table-of-contents)
+<hr> 
 
 10. ## Acknowledgements
 
+    - First of all, I want to thank my partner, who got my back, supported me and showed her trust in me throughout this project!
+    - Second, I want to thank my friend Victor vd Linden, who sat by my side a couple of nights showing me sometimes the best way is too take a couple of steps back and go back to the basics.
+    - Third, I want to thank my mentor Mo Shami, who incouraged me to push myself and to trust the proces. 
+    - Lastly, I want to thank the Code Institute Slack community, for support, loving words of encouragement and overall kindness. We're really in it together! 
 
+    [Back to Table Of Contents](#table-of-contents)
+<hr> 
 
+11. ## Features for the future
 
+    - security, no adding tools to other peoples list if you know their names. 
+    - Forgot password option.
+    - Function for endless tool adding possibillity.
+    - Multiple search results if more people have the same tool.
+    - Take a tool out of the list.
 
-future reference:
-- security, no adding tools to other people if you know their names. 
-- Forgot password option.
-- function for endless tool adding possibillity.
-- multiple search results if more people have the same tool.
-- take a tool out of the list.
+    [Back to Table Of Contents](#table-of-contents)
+<hr> 
