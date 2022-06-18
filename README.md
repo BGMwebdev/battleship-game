@@ -11,7 +11,8 @@
 Welcome to the Tools for borrow - system. This program aims to make life easier and cheaper for residents of an appartment building. Through registration the residents are provided with a system that will give insight in, and allow them to, borrow eachothers tools. 
 This way the residents don't have to buy all new tools, and the tools in circulation get to be used more often instead of lying somewhere unused. This project was written mainly in Python language for educational purpose with Code Institue. For the purpose of this project I used Google spreadsheets to collect, manipulate and save data.
 
-[Here is is a live link to the project]()
+[Here is a live link to the project](https://tools-for-neighbours.herokuapp.com/)
+[Here is a link to the Google spreadsheet](https://docs.google.com/spreadsheets/d/17B3WmvKJfGTjMVRvv8r-vYdCMGgILupz_aaxxw6AuBQ/edit?usp=sharing)
 <hr>
 
 ## Table of Contents
@@ -463,6 +464,9 @@ This way the residents don't have to buy all new tools, and the tools in circula
     9.  Choose the branch you want to buid your app from
     10. If prefered, click on "Enable Automatic Deploys", which keeps the app up to date with your GitHub repository
     11. Wait for the app to build. Once ready you will see the “App was successfully deployed” message and a 'View' button to take you to your deployed link.
+
+    [Here is a live link to the project](https://tools-for-neighbours.herokuapp.com/)
+    [Here is a link to the Google spreadsheet](https://docs.google.com/spreadsheets/d/17B3WmvKJfGTjMVRvv8r-vYdCMGgILupz_aaxxw6AuBQ/edit?usp=sharing)
 
     [Back to Table Of Contents](#table-of-contents)
 <hr>
