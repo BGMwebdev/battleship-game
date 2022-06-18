@@ -432,6 +432,8 @@ Welcome to the Tools for borrow - system. This program aims to make life easier 
     | more than 8 tools added will throw an error , for columns are not used | I've added a statement for a max of 8 tools to be added. I've not fixed the error thrown | 
     | tool add func throws error after wrong name, like with log in | I created a while loop with a choice menu and if try again is chosen, continue |
     | Exit from main menu after search tool, results in question: what tool are you looking for? | not fixed, it is not clear why it happens, and it doesn't seem to happen again. Hypotheses is it has to do with reach of columns. To try to avoid it from happpening again, I've upscaled the reach of columns to Z in the function. |
+    | Keeps giving trailing white space | It went through pep8 checker, took out all the trailing white space, but in gitpod, it keeps giving me warnings for trailing white space |
+    | line 212, 255 and 369 have unreachable code | I'm not sure why, but it does seem to work properly within the code it is now, so it's left unfixed, for now |
 
     [Back to Table Of Contents](#table-of-contents)
 <hr>

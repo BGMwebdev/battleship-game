@@ -61,7 +61,8 @@ def explanation():
 
 def start_menu():
     """
-    Presents two options, to register or to log in
+    Presents two options, to register or to log in.
+    Detects if one out of two options is given
     """
     time.sleep(1)
     print("Please select one of the options and press enter: ")
@@ -81,7 +82,7 @@ def start_menu():
         time.sleep(2)
         clear_console()
         registration()
-        
+
     elif menu_selected == "2":
         print("You choose to log in.")
         print("Loading...")
@@ -93,7 +94,7 @@ def start_menu():
 def registration():
     """
     Registers a resident by asking for data input
-    like first name and last name.
+    like first name, last name and phone number.
     """
     while 'n':
         time.sleep(1)
@@ -105,7 +106,7 @@ def registration():
             print(f"Only letters are required, you provided: {fname}")
             print('')
             fname = input("Please enter your first name again:\n")
-        
+
         upd_fname = name_correct(fname)
         print(f"Hi {upd_fname}!")
         print('')
@@ -113,7 +114,7 @@ def registration():
 
         print("When entering your name, do not use digits or spaces")
         lname = input("What is your last name?\n")
-        # This will make sure to have no digits in the name
+        # This will make sure to have only letters in the name
         while lname.isalpha() is False:
             print("Only letters are required, do not use digits or spaces")
             print(f"you provided: {lname}")
@@ -127,26 +128,27 @@ def registration():
 
         phone = str(input("Please enter you phone number:\n"))
         while phone.isdigit() is False:
-            print("Only digits are required, no letters or spaces.") 
+            print("Only digits are required, no letters or spaces.")
             print(f"you provided: {phone}")
             print('')
             phone = input("Please enter your phone number again:\n")
-        
+
         print("we now have you registered as:")
         print(f"{upd_fname} {upd_lname} {phone}")
         time.sleep(1)
         correct = input("Is that correct? 'y' for yes or 'n' for no:\n")
 
+        # This will make sure one of the two options is chosen
         while correct not in ('n', 'y'):
             print('')
             print(f"'y' or 'n' is requirred, you provided {correct}.")
             time.sleep(1)
             correct = input("'y' for yes or 'n' for no:\n")
-            
+
         if correct == 'n':
             print('')
-            print("Let's try that again!") 
-            
+            print("Let's try that again!")
+
         elif correct == 'y':
             print('')
             print("Great! We're almost there...\n")
@@ -162,8 +164,7 @@ def registration():
 
 def name_correct(data):
     """
-    This will make sure spaces are considered in the name
-    and the names are capitalized before going into the spreadsheet
+    Capitalize names before going into the spreadsheet
     """
     name_corr = (data).capitalize()
     return name_corr
@@ -189,7 +190,7 @@ def update_member_worksheet(data):
 
 def create_psswd():
     """
-    Create a unique password.
+    Print restrictions and present input for a unique password.
     """
     time.sleep(1)
     print("To be able to log in, you need to create a unique password.")
@@ -201,10 +202,10 @@ def create_psswd():
     print("At least 1 digit")
     print("And no spaces")
     print('')
-    while True:    
+    while True:
         time.sleep(2)
         password = input("please enter your unique password:\n")
-        if (password_check(password)):
+        if password_check(password):
             print("Password is valid\n")
             time.sleep(2)
             return password
@@ -213,33 +214,35 @@ def create_psswd():
 
 def password_check(password):
     """
-    Checks if password is valid
+    Check if password is valid within the restrictions given
+    using length, uppercase, lowercase and isdigit
     """
     val = True
-      
+
     if len(password) < 6:
         print('length should be at least 6')
         val = False
-          
+
     if not any(char.isupper() for char in password):
         print('Password should have at least one uppercase letter')
         val = False
-    
+
     if not any(char.islower() for char in password):
         print('Password should have at least one lowercase letter')
         val = False
-    
+
     if not any(char.isdigit() for char in password):
         print('Password should have at least one digit')
         val = False
-    
+
     if val:
         return val
 
 
 def name_row_number():
     """
-    With a for loop the row number of the name input is returned
+    With a for loop through the list from the srpeadsheet
+    the row number of the name input is returned
     """
     while True:
         user_lname = input('Enter your last name: \n').capitalize()
@@ -248,7 +251,7 @@ def name_row_number():
         for x in login_names:
             if x == user_lname:
                 print("Your name has been found.")
-                return lname_row_number 
+                return lname_row_number
                 list_psswd_check(lname_row_number)
             lname_row_number += 1
         print("The name you gave is not found!")
@@ -277,7 +280,7 @@ def name_row_number():
 
 def list_psswd_check(lname_row_number):
     """
-    check password in list
+    Returns list of values of specific row
     """
     login_list = members.row_values(lname_row_number)
     return login_list
@@ -285,7 +288,7 @@ def list_psswd_check(lname_row_number):
 
 def password_val(list_psswd):
     """
-    password check
+    Password check
     """
     while True:
         input_psswd = input("\nPlease enter your unique password: \n")
@@ -302,10 +305,10 @@ def password_val(list_psswd):
 
 def log_in_main():
     """
-    Main login function
+    Main login function goes through the needed login functions
     """
-    row_number = name_row_number()
-    list_psswd = list_psswd_check(row_number)
+    row_num = name_row_number()
+    list_psswd = list_psswd_check(row_num)
     password_val(list_psswd)
 
 
@@ -313,6 +316,7 @@ def main_menu():
     """
     Presents three options
     to add a tool, to search for a tool or to exit
+    makes sure one is chosen
     """
     clear_console()
     time.sleep(1)
@@ -334,7 +338,7 @@ def main_menu():
         time.sleep(1)
         clear_console()
         add_tool()
-                
+
     elif menu_selected == "2":
         print("You choose to search for a tool.")
         print("Loading...")
@@ -355,13 +359,13 @@ def row_number():
     that corresponds to the name input given
     """
     while True:
-        user_lname = input('Please enter your last name again: \n').capitalize()
+        user_lname = input('Enter your last name again: \n').capitalize()
         member_names = members.col_values(2)
         lname_row_number = 1
         for x in member_names:
             if x == user_lname:
                 print("Thank you")
-                return lname_row_number 
+                return lname_row_number
                 list_psswd_check(lname_row_number)
             lname_row_number += 1
         print("The name you gave was not found!")
@@ -424,6 +428,9 @@ def update_member_row(lname_row_number, member_list):
 
 
 def return_overview_tools(lname_row_number):
+    """
+    Print overview of tools present in specific list spreadsheet
+    """
     tools_list = members.row_values(lname_row_number)
     print("Here is an overview of your tools:")
     for i in tools_list[4:]:
@@ -454,6 +461,10 @@ def return_overview_tools(lname_row_number):
 
 
 def add_tool():
+    """
+    Main add tool function, will go through the different function
+    to add a tool to the spreadsheet
+    """
     right_row = row_number()
     list_tools = list_member_tools(right_row)
     member_list = add_tool_to_list(list_tools)
@@ -462,7 +473,11 @@ def add_tool():
 
 
 def search_for_tool():
-    while True:        
+    """
+    Find corresponding tool in data, returns validation and 
+    name and number of neighbour in possession
+    """
+    while True:
         search_input = input("What tool are you looking for?\n")
         if members.find(search_input):
             result_row = members.find(search_input).row
@@ -470,7 +485,7 @@ def search_for_tool():
             print()
             print("You're in luck!!")
             print(f"We've found the {search_input} you're looking for!")
-            print(f"Your neighbour is: {match_list[0]} {match_list[1]}") 
+            print(f"Your neighbour is: {match_list[0]} {match_list[1]}")
             print(f"You can reach them on: {match_list[2]}")
             break
         else:
